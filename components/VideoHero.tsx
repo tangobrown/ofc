@@ -1,0 +1,51 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import Button from "./Button";
+
+/**
+ * Home-only full-screen video hero. The smoke .mp4 has audio, so we force-mute
+ * via ref after mount (React/Next won't reliably apply the `muted` attribute).
+ */
+export default function VideoHero({ src }: { src: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (v) {
+      v.muted = true;
+      v.volume = 0;
+      v.play?.().catch(() => {});
+    }
+  }, []);
+
+  return (
+    <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
+      <video
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src={src} type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-home-scrim" />
+
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+        <h1 className="m-0 font-display text-[clamp(34px,5.2vw,72px)] font-semibold uppercase leading-[1.06] tracking-[0.05em] text-gold [text-shadow:0_2px_18px_rgba(0,0,0,.6)]">
+          Smokin&apos; Drinks
+          <br />
+          With a Measure of Style
+        </h1>
+        <p className="mb-9 mt-[22px] text-[clamp(16px,1.5vw,21px)] tracking-[0.02em] text-[#e9e3d7]">
+          Mobile Cocktail Bar Hire in New York
+        </p>
+        <Button href="#" tone="cream">
+          Book Now
+        </Button>
+      </div>
+    </section>
+  );
+}

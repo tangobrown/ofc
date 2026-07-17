@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Arvo', serif; }
+  h1, h2, h3 { font-family: 'Bosque', 'Josefin Sans', sans-serif !important; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #d9c4a6; }
+  ::selection { background: #c09d6c; color: #17140f; }
+</style>
+</helmet>
+
+<div style="background:#161616; color:#c9c2b6; font-family:'Arvo',serif; overflow-x:hidden;">
+
+  <!-- ===== HERO ===== -->
+  <section style="position:relative; height:100vh; min-height:640px; width:100%; overflow:hidden;">
+    <video ref="{{ videoRef }}" autoplay muted loop playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <source src="https://theoldfashionedcocktailco.com/wp-content/uploads/2025/08/Smoke-3-3.mp4" type="video/mp4">
+    </video>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(17,14,10,.72) 0%, rgba(17,14,10,.35) 30%, rgba(17,14,10,.5) 70%, rgba(17,14,10,.85) 100%);"></div>
+
+    <!-- Nav -->
+    <nav style="position:absolute; top:0; left:0; right:0; z-index:20; display:flex; align-items:center; justify-content:space-between; padding:26px 46px; font-family:'Arvo',serif;">
+      <div style="display:flex; align-items:center; gap:18px; color:#c09d6c; font-size:15px; flex:1;">
+        <a href="#" aria-label="Facebook" style="opacity:.85;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.37H7.7V13h2.7v8h3.1z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" style="opacity:.85;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+      <div style="display:flex; align-items:center; gap:26px; text-transform:uppercase; letter-spacing:.14em; font-size:12.5px; font-weight:400; color:#e7e1d5;">
+        <a href="#">Home</a>
+        <a href="#">Events ▾</a>
+        <a href="#">How It Works</a>
+        <img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2020/06/The-Old-Fashoioned-Primary-Light.png" alt="The Old Fashioned Cocktail Co" style="height:60px; margin:0 8px; object-fit:contain;">
+        <a href="#">Our Fleet</a>
+        <a href="#">About ▾</a>
+        <a href="#">Contact</a>
+      </div>
+      <div style="flex:1; display:flex; justify-content:flex-end;">
+        <a href="#" style="border:1px solid #c09d6c; color:#e7e1d5; text-transform:uppercase; letter-spacing:.14em; font-size:11px; padding:11px 20px;">Instant Quote</a>
+      </div>
+    </nav>
+
+    <!-- Hero content -->
+    <div style="position:relative; z-index:10; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 24px;">
+      <h1 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.05em; line-height:1.06; margin:0; font-size:clamp(34px,5.2vw,72px); text-shadow:0 2px 18px rgba(0,0,0,.6);">Smokin' Drinks<br>With a Measure of Style</h1>
+      <p style="font-family:'Arvo',serif; font-size:clamp(16px,1.5vw,21px); letter-spacing:.02em; color:#e9e3d7; margin:22px 0 34px;">Mobile Cocktail Bar Hire in New York</p>
+      <a href="#" style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:#f2ecdf; border:1px solid rgba(242,236,223,.75); padding:14px 30px; display:inline-flex; align-items:center; gap:12px;" style-hover="background:#c09d6c; border-color:#c09d6c; color:#17140f;">Book Now <span style="font-size:14px;">→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== SPEAKEASY ===== -->
+  <section style="max-width:1000px; margin:0 auto; padding:120px 40px 90px; display:grid; grid-template-columns:1fr 1.35fr; gap:60px; align-items:start;">
+    <h2 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.04em; font-size:clamp(28px,3vw,40px); line-height:1.08; margin:0;">The Speakeasy<br>That Finds You</h2>
+    <div>
+      <p style="font-size:18px; line-height:1.75; margin:0 0 20px; color:#c4bdb0;">We'll bring all the theater and razzle-dazzle of a big city blowout right to your party, wedding or corporate event. Our slick, professional bartenders will show up to your chosen location, assemble an authentic mobile cocktail bar and shake a whole bunch of hotsy-totsy cocktails guaranteed to take you and your guests right back to the good times.</p>
+      <p style="font-size:18px; line-height:1.75; margin:0 0 34px; color:#c4bdb0;">Let's go ahead and make yours a classic…</p>
+      <a href="#" style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:#f2ecdf; border:1px solid rgba(201,162,75,.85); padding:13px 26px; display:inline-flex; align-items:center; gap:12px;" style-hover="background:#c09d6c; color:#17140f;">How It Works <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== MEET THE FLEET ===== -->
+  <section style="max-width:1000px; margin:0 auto; padding:20px 40px 80px;">
+    <h2 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.03em; font-size:clamp(28px,3.4vw,44px); margin:0 0 46px;">Meet the Fleet…</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:44px;">
+      <div>
+        <div style="aspect-ratio:3/2; overflow:hidden; margin-bottom:24px;">
+          <img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2023/04/The_Old_Fashioned_Main2.jpg" alt="The Old Fashioned bar" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <h3 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.03em; font-size:20px; margin:0 0 14px;">'The Old Fashioned'</h3>
+        <p style="font-size:16px; line-height:1.7; color:#b7b0a3; margin:0 0 22px;">Our flagship bar is a classy dame, we're sure you'll agree. Lovingly crafted from white oak, vintage brass accents and genuine leather, she'd be right at home in the VIP section of any bar or club in the land. So why not make her the first name on your guest list?</p>
+        <a href="#" style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.16em; font-size:11px; color:#f2ecdf; border:1px solid rgba(201,162,75,.85); padding:11px 22px; display:inline-flex; align-items:center; gap:10px;" style-hover="background:#c09d6c; color:#17140f;">Learn More <span>→</span></a>
+      </div>
+      <div>
+        <div style="aspect-ratio:3/2; overflow:hidden; margin-bottom:24px;">
+          <img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2023/04/Tommy_Gun_Cocktail_Cart_Main2.jpg" alt="Little Tommy Gun cart" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <h3 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.03em; font-size:20px; margin:0 0 14px;">'Little Tommy Gun'</h3>
+        <p style="font-size:16px; line-height:1.7; color:#b7b0a3; margin:0 0 22px;">A meticulously converted Piaggio Ape truck, Little Tommy Gun doesn't throw lead, but he's fully loaded with all kindsa shots. LTG is equally at home alongside his big sister, The Old Fashioned, at larger events, or handling smaller/indoor parties on his own.</p>
+        <a href="#" style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.16em; font-size:11px; color:#f2ecdf; border:1px solid rgba(201,162,75,.85); padding:11px 22px; display:inline-flex; align-items:center; gap:10px;" style-hover="background:#c09d6c; color:#17140f;">Learn More <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY STRIP ===== -->
+  <section style="padding:20px 0 90px;">
+    <div style="display:flex; gap:8px; overflow-x:auto; padding:0 40px 22px;">
+      <div style="flex:0 0 auto; width:380px; height:290px;"><image-slot id="gal1" shape="rect" fit="cover" placeholder="Bartender at the oak bar"></image-slot></div>
+      <div style="flex:0 0 auto; width:290px; height:290px;"><image-slot id="gal2" shape="rect" fit="cover" placeholder="Tommy Gun cart, floral"></image-slot></div>
+      <div style="flex:0 0 auto; width:250px; height:290px;"><image-slot id="gal3" shape="rect" fit="cover" placeholder="Close-up of cocktail"></image-slot></div>
+      <div style="flex:0 0 auto; width:340px; height:290px;"><image-slot id="gal4" shape="rect" fit="cover" placeholder="Cocktail making in progress"></image-slot></div>
+      <div style="flex:0 0 auto; width:300px; height:290px;"><image-slot id="gal5" shape="rect" fit="cover" placeholder="Ingredients for cocktails"></image-slot></div>
+    </div>
+    <div style="max-width:1000px; margin:0 auto; padding:0 40px;">
+      <div style="height:1px; background:linear-gradient(90deg,#c09d6c,rgba(201,162,75,0)); width:220px;"></div>
+    </div>
+  </section>
+
+  <!-- ===== MAKE YOURS A CLASSIC ===== -->
+  <section style="position:relative; min-height:620px; display:flex; align-items:center;">
+    <div style="position:absolute; inset:0;">
+      <image-slot id="flappers" shape="rect" fit="cover" placeholder="1920s flappers with cocktails"></image-slot>
+    </div>
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(17,13,9,.78) 0%, rgba(17,13,9,.35) 45%, rgba(17,13,9,.15) 100%); pointer-events:none;"></div>
+    <div style="position:relative; z-index:5; margin-left:min(9vw,150px); max-width:340px; border:1px solid rgba(201,162,75,.6); padding:44px 40px; background:rgba(17,13,9,.28); backdrop-filter:blur(1px);">
+      <h2 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.04em; font-size:30px; line-height:1.1; margin:0 0 16px;">Make Yours a Classic</h2>
+      <p style="font-size:17px; line-height:1.6; color:#d6cfc2; margin:0 0 28px;">Secure our services for your next event.</p>
+      <a href="#" style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.16em; font-size:11px; color:#f2ecdf; border:1px solid rgba(242,236,223,.75); padding:12px 24px; display:inline-flex; align-items:center; gap:10px;" style-hover="background:#c09d6c; border-color:#c09d6c; color:#17140f;">Book Now <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== INSTAGRAM ===== -->
+  <section style="padding:90px 40px 70px; text-align:center;">
+    <h2 style="font-family:'Arvo',serif; font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:clamp(26px,3vw,38px); margin:0 0 44px; color:#efe9dc;">The Latest on <span style="color:#c09d6c;">Instagram</span></h2>
+    <div style="max-width:1120px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:18px;">
+      <div style="text-align:left;">
+        <div style="aspect-ratio:1; margin-bottom:12px;"><image-slot id="ig1" shape="rect" fit="cover" placeholder="Instagram post 1"></image-slot></div>
+        <p style="font-size:14px; color:#9a938657; color:#928b7e; margin:0 0 8px; line-height:1.5;">Summer nights done right 🍸 Book one of…</p>
+        <div style="font-family:'Arvo',serif; font-size:12px; color:#c09d6c; letter-spacing:.05em;">♡ 9 &nbsp; ♥ 5</div>
+      </div>
+      <div style="text-align:left;">
+        <div style="aspect-ratio:1; margin-bottom:12px;"><image-slot id="ig2" shape="rect" fit="cover" placeholder="Instagram post 2"></image-slot></div>
+        <p style="font-size:14px; color:#928b7e; margin:0 0 8px; line-height:1.5;">Creating unforgettable experiences, one cocktail…</p>
+        <div style="font-family:'Arvo',serif; font-size:12px; color:#c09d6c; letter-spacing:.05em;">♡ 42 &nbsp; ♥ 6</div>
+      </div>
+      <div style="text-align:left;">
+        <div style="aspect-ratio:1; margin-bottom:12px;"><image-slot id="ig3" shape="rect" fit="cover" placeholder="Instagram post 3"></image-slot></div>
+        <p style="font-size:14px; color:#928b7e; margin:0 0 8px; line-height:1.5;">Seasons are made in a designer to suit your…</p>
+        <div style="font-family:'Arvo',serif; font-size:12px; color:#c09d6c; letter-spacing:.05em;">♡ 21 &nbsp; ♥ 10</div>
+      </div>
+      <div style="text-align:left;">
+        <div style="aspect-ratio:1; margin-bottom:12px;"><image-slot id="ig4" shape="rect" fit="cover" placeholder="Instagram post 4"></image-slot></div>
+        <p style="font-size:14px; color:#928b7e; margin:0 0 8px; line-height:1.5;">The Tommy Gun Tap Truck is back and ready for…</p>
+        <div style="font-family:'Arvo',serif; font-size:12px; color:#c09d6c; letter-spacing:.05em;">♡ 15 &nbsp; ♥ 12</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="padding:40px 40px 46px; text-align:center; border-top:1px solid rgba(201,162,75,.18);">
+    <div style="display:flex; justify-content:center; gap:22px; margin-bottom:22px; color:#c09d6c;">
+      <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.37H7.7V13h2.7v8h3.1z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+    <p style="font-family:'Arvo',serif; font-size:12px; letter-spacing:.08em; color:#7d766a; margin:0;">© 2026 The Old Fashioned Cocktail Co. — All rights reserved.</p>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  videoRef = React.createRef();
+  componentDidMount() {
+    const v = this.videoRef.current;
+    if (v) { v.muted = true; v.volume = 0; v.play && v.play().catch(() => {}); }
+  }
+  renderVals() { return { videoRef: this.videoRef }; }
+}
+</script>
+</body>
+</html>

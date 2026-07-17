@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg font-body text-body antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: #c09d6c;
+    color: #161616;
+  }
+}
+
+@layer components {
+  /* Outline "book now" style button. Fills gold on hover. */
+  .btn-outline {
+    @apply inline-flex items-center gap-3 border font-body uppercase text-heading-light;
+    letter-spacing: 0.16em;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+  .btn-outline:hover {
+    @apply bg-gold text-bg;
+    border-color: #c09d6c;
+  }
+
+  /* Gold eyebrow label above section headings */
+  .eyebrow {
+    @apply font-body text-gold;
+    letter-spacing: 0.05em;
+  }
+
+  /* 60px gold underline used under section headings */
+  .rule-gold {
+    @apply h-px w-[60px] bg-gold;
+  }
+}

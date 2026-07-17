@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Arvo', serif; }
+  h1, h2, h3 { font-family: 'Bosque', 'Josefin Sans', sans-serif !important; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #d9c4a6; }
+  ::selection { background: #c09d6c; color: #161616; }
+</style>
+</helmet>
+
+<div style="background:#161616; color:#c9c2b6; font-family:'Arvo',serif; overflow-x:hidden;">
+
+  <!-- ===== HERO ===== -->
+  <section style="position:relative; height:56vh; min-height:440px; width:100%; overflow:hidden;">
+    <div style="position:absolute; inset:0;">
+      <image-slot id="bl-hero" shape="rect" fit="cover" placeholder="Cigars & dried citrus flatlay"></image-slot>
+    </div>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,16,12,.72) 0%, rgba(20,16,12,.4) 45%, rgba(20,16,12,.66) 100%); pointer-events:none;"></div>
+
+    <nav style="position:absolute; top:0; left:0; right:0; z-index:20; display:flex; align-items:center; justify-content:space-between; padding:22px 46px; font-family:'Arvo',serif; pointer-events:none;">
+      <div style="display:flex; align-items:center; gap:18px; color:#c09d6c; font-size:15px; flex:1; pointer-events:auto;">
+        <a href="#" aria-label="Facebook" style="opacity:.85;"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.37H7.7V13h2.7v8h3.1z"/></svg></a>
+        <a href="#" aria-label="Instagram" style="opacity:.85;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+      <div style="display:flex; align-items:center; gap:26px; text-transform:uppercase; letter-spacing:.14em; font-size:12.5px; color:#e7e1d5; pointer-events:auto;">
+        <a href="Old Fashioned Cocktail Co.dc.html">Home</a>
+        <a href="All Events.dc.html">Events ▾</a>
+        <a href="How It Works.dc.html">How It Works</a>
+        <img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2020/06/The-Old-Fashoioned-Primary-Light.png" alt="The Old Fashioned Cocktail Co" style="height:56px; margin:0 8px; object-fit:contain;">
+        <a href="Our Fleet.dc.html">Our Fleet</a>
+        <a href="About.dc.html" style="color:#c09d6c;">About ▾</a>
+        <a href="#">Contact</a>
+      </div>
+      <div style="flex:1; display:flex; justify-content:flex-end; pointer-events:auto;">
+        <a href="#" style="border:1px solid #c09d6c; color:#e7e1d5; text-transform:uppercase; letter-spacing:.14em; font-size:11px; padding:11px 20px;">Instant Quote</a>
+      </div>
+    </nav>
+
+    <div style="position:relative; z-index:10; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:110px 24px 40px;">
+      <h1 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.03em; line-height:1.05; margin:0; font-size:clamp(30px,4.4vw,58px); text-shadow:0 2px 18px rgba(0,0,0,.6);">Tips 'n Tricks</h1>
+      <p style="font-family:'Arvo',serif; font-style:italic; font-size:clamp(14px,1.3vw,18px); color:#e2dccf; margin:16px 0 0;">Shake up your bartending skills.</p>
+    </div>
+  </section>
+
+  <!-- ===== POSTS ===== -->
+  <section style="max-width:1080px; margin:0 auto; padding:80px 40px 60px; display:flex; flex-direction:column; gap:64px;">
+
+    <article style="display:grid; grid-template-columns:400px 1fr; gap:48px; align-items:center;">
+      <a href="Blog - Mezcal for Cocktail Mixing.dc.html" style="display:block; width:100%; aspect-ratio:3/2; overflow:hidden;"><img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2021/02/mezcal__drink_with_oranges_on_a_beach-900x536.jpg" alt="Mezcal for Cocktail Mixing" style="width:100%; height:100%; object-fit:cover;"></a>
+      <div>
+        <p style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.06em; color:#c09d6c; font-size:12px; margin:0 0 12px;">Old Fashioned Connoisseur Club</p>
+        <h2 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.02em; font-size:26px; line-height:1.12; margin:0 0 16px;"><a href="Blog - Mezcal for Cocktail Mixing.dc.html" style-hover="color:#c09d6c;">Mezcal for Cocktail Mixing</a></h2>
+        <p style="font-size:16px; line-height:1.7; color:#b7b0a3; margin:0 0 16px;">Welcome back to The Old Fashioned Connoisseur Club. In this blog series we'll be imparting a few tidbits of our hard-earned knowledge, distilled over years of slingin' bottles and mixing up a storm. Previously we've looked deep into whiskey, and this time out we're headin' south of the border to give mezcal a well-deserved mention. Why drink mezcal? Mexican legend…</p>
+        <p style="font-family:'Arvo',serif; letter-spacing:.05em; font-size:12px; color:#8a8377; text-transform:uppercase; margin:0;">February 4, 2021</p>
+      </div>
+    </article>
+
+    <article style="display:grid; grid-template-columns:400px 1fr; gap:48px; align-items:center;">
+      <a href="Blog - Choosing Whiskey for Cocktails.dc.html" style="display:block; width:100%; aspect-ratio:3/2; overflow:hidden;"><img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2020/12/Range_Of_Whisky_In_A_Bar-900x600.jpg" alt="Choosing Whiskey for Cocktails" style="width:100%; height:100%; object-fit:cover;"></a>
+      <div>
+        <p style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.06em; color:#c09d6c; font-size:12px; margin:0 0 12px;">Old Fashioned Tips</p>
+        <h2 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.02em; font-size:26px; line-height:1.12; margin:0 0 16px;"><a href="Blog - Choosing Whiskey for Cocktails.dc.html" style-hover="color:#c09d6c;">Choosing Whiskey for Cocktails</a></h2>
+        <p style="font-size:16px; line-height:1.7; color:#b7b0a3; margin:0 0 16px;">A brand new blog series where we'll be imparting a few tidbits of our hard-earned knowledge, distilled over years of slingin' bottles and mixing up a storm. Where to start the series? Well, where better to start than whiskey? A spirit that's at the heart of many a classic cocktail, a little extra whiskey know-how will take your cocktails a…</p>
+        <p style="font-family:'Arvo',serif; letter-spacing:.05em; font-size:12px; color:#8a8377; text-transform:uppercase; margin:0;">December 4, 2020</p>
+      </div>
+    </article>
+
+    <article style="display:grid; grid-template-columns:400px 1fr; gap:48px; align-items:center;">
+      <a href="Blog - Clear Ice.dc.html" style="display:block; width:100%; aspect-ratio:3/2; overflow:hidden;"><img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2020/06/Cocktails-made-by-Dwayne-from-Old-Fashioned.jpg" alt="How to make clear ice" style="width:100%; height:100%; object-fit:cover;"></a>
+      <div>
+        <p style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.06em; color:#c09d6c; font-size:12px; margin:0 0 12px;">Old Fashioned Tips</p>
+        <h2 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.02em; font-size:26px; line-height:1.12; margin:0 0 16px;"><a href="Blog - Clear Ice.dc.html" style-hover="color:#c09d6c;">How to Make Clear Ice the Old Fashioned Way</a></h2>
+        <p style="font-size:16px; line-height:1.7; color:#b7b0a3; margin:0 0 16px;">Serving drinks with a measure of style requires a focus on the details. Get the basics right and you may meet expectations. But to be memorable, you need to surpass them. Ask yourself – when was the last time you found yourself jawing to a friend about the new joint in town because "they just did the basics well…" Never,…</p>
+        <p style="font-family:'Arvo',serif; letter-spacing:.05em; font-size:12px; color:#8a8377; text-transform:uppercase; margin:0;">September 10, 2020</p>
+      </div>
+    </article>
+
+    <article style="display:grid; grid-template-columns:400px 1fr; gap:48px; align-items:center;">
+      <a href="Blog - Old Fashioned Cocktail.dc.html" style="display:block; width:100%; aspect-ratio:3/2; overflow:hidden;"><img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2020/06/Ingredients-for-cocktails-800x600.jpg" alt="How to make an Old Fashioned cocktail" style="width:100%; height:100%; object-fit:cover;"></a>
+      <div>
+        <p style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.06em; color:#c09d6c; font-size:12px; margin:0 0 12px;">Old Fashioned Tips</p>
+        <h2 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.02em; font-size:26px; line-height:1.12; margin:0 0 16px;"><a href="Blog - Old Fashioned Cocktail.dc.html" style-hover="color:#c09d6c;">How to Make an Old Fashioned Cocktail</a></h2>
+        <p style="font-size:16px; line-height:1.7; color:#b7b0a3; margin:0 0 16px;">The history of old fashioned cocktails goes way back. We're talkin' all the way to the 1800's back. Folks are still quarreling over the exact date to this day – we're not surprised the fellas and gals who made it first were a little fuzzy on the details after. But the fact that they're still as popular as ever shows…</p>
+        <p style="font-family:'Arvo',serif; letter-spacing:.05em; font-size:12px; color:#8a8377; text-transform:uppercase; margin:0;">July 29, 2020</p>
+      </div>
+    </article>
+
+    <article style="display:grid; grid-template-columns:400px 1fr; gap:48px; align-items:center;">
+      <a href="Blog - Party a Classic.dc.html" style="display:block; width:100%; aspect-ratio:3/2; overflow:hidden;"><img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2020/06/Old-school-music-player.jpg" alt="How to make your party a classic" style="width:100%; height:100%; object-fit:cover;"></a>
+      <div>
+        <p style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.06em; color:#c09d6c; font-size:12px; margin:0 0 12px;">Old Fashioned Tips</p>
+        <h2 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.02em; font-size:26px; line-height:1.12; margin:0 0 16px;"><a href="Blog - Party a Classic.dc.html" style-hover="color:#c09d6c;">How to Make Your Party a Classic</a></h2>
+        <p style="font-size:16px; line-height:1.7; color:#b7b0a3; margin:0 0 16px;">Why would you choose to throw a party the old fashioned way? It's a fair question, we guess. But perhaps "why wouldn't you..?" would be a better one. The classics become classics for a reason, after all. We believe that a good old fashioned party and a good old fashioned cocktail share the same key elements: a few simple ingredients…</p>
+        <p style="font-family:'Arvo',serif; letter-spacing:.05em; font-size:12px; color:#8a8377; text-transform:uppercase; margin:0;">June 14, 2020</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===== INSTAGRAM ===== -->
+  <section style="padding:40px 40px 70px; text-align:center;">
+    <h2 style="font-family:'Arvo',serif; font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:clamp(26px,3vw,38px); margin:0 0 44px; color:#efe9dc;">The Latest on <span style="color:#c09d6c;">Instagram</span></h2>
+    <div style="max-width:1120px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:18px;">
+      <div style="aspect-ratio:1;"><image-slot id="blig1" shape="rect" fit="cover" placeholder="Instagram post 1"></image-slot></div>
+      <div style="aspect-ratio:1;"><image-slot id="blig2" shape="rect" fit="cover" placeholder="Instagram post 2"></image-slot></div>
+      <div style="aspect-ratio:1;"><image-slot id="blig3" shape="rect" fit="cover" placeholder="Instagram post 3"></image-slot></div>
+      <div style="aspect-ratio:1;"><image-slot id="blig4" shape="rect" fit="cover" placeholder="Instagram post 4"></image-slot></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="padding:40px 40px 46px; text-align:center; border-top:1px solid rgba(192,157,108,.18);">
+    <div style="display:flex; justify-content:center; gap:22px; margin-bottom:22px; color:#c09d6c;">
+      <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.37H7.7V13h2.7v8h3.1z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+    <p style="font-family:'Arvo',serif; font-size:12px; letter-spacing:.08em; color:#7d766a; margin:0;">© 2026 The Old Fashioned Cocktail Co. — All rights reserved.</p>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

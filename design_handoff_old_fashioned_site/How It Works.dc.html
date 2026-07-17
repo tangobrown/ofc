@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Arvo', serif; }
+  h1, h2, h3 { font-family: 'Bosque', 'Josefin Sans', sans-serif !important; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #d9c4a6; }
+  ::selection { background: #c09d6c; color: #161616; }
+</style>
+</helmet>
+
+<div style="background:#161616; color:#c9c2b6; font-family:'Arvo',serif; overflow-x:hidden;">
+
+  <!-- ===== HERO ===== -->
+  <section style="position:relative; height:72vh; min-height:580px; width:100%; overflow:hidden;">
+    <div style="position:absolute; inset:0;">
+      <image-slot id="hw-hero" shape="rect" fit="cover" placeholder="Oak bar & vintage car in garage"></image-slot>
+    </div>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,16,12,.72) 0%, rgba(20,16,12,.35) 40%, rgba(20,16,12,.6) 100%); pointer-events:none;"></div>
+
+    <nav style="position:absolute; top:0; left:0; right:0; z-index:20; display:flex; align-items:center; justify-content:space-between; padding:22px 46px; font-family:'Arvo',serif; pointer-events:none;">
+      <div style="display:flex; align-items:center; gap:18px; color:#c09d6c; font-size:15px; flex:1; pointer-events:auto;">
+        <a href="#" aria-label="Facebook" style="opacity:.85;"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.37H7.7V13h2.7v8h3.1z"/></svg></a>
+        <a href="#" aria-label="Instagram" style="opacity:.85;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+      <div style="display:flex; align-items:center; gap:26px; text-transform:uppercase; letter-spacing:.14em; font-size:12.5px; color:#e7e1d5; pointer-events:auto;">
+        <a href="Old Fashioned Cocktail Co.dc.html">Home</a>
+        <a href="All Events.dc.html">Events ▾</a>
+        <a href="#" style="color:#c09d6c;">How It Works</a>
+        <img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2020/06/The-Old-Fashoioned-Primary-Light.png" alt="The Old Fashioned Cocktail Co" style="height:56px; margin:0 8px; object-fit:contain;">
+        <a href="#">Our Fleet</a>
+        <a href="#">About ▾</a>
+        <a href="#">Contact</a>
+      </div>
+      <div style="flex:1; display:flex; justify-content:flex-end; pointer-events:auto;">
+        <a href="#" style="border:1px solid #c09d6c; color:#e7e1d5; text-transform:uppercase; letter-spacing:.14em; font-size:11px; padding:11px 20px;">Instant Quote</a>
+      </div>
+    </nav>
+
+    <div style="position:relative; z-index:10; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:150px 24px 60px;">
+      <h1 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.03em; line-height:1.05; margin:0; font-size:clamp(30px,4.4vw,58px); text-shadow:0 2px 18px rgba(0,0,0,.6);">Build Your Package</h1>
+      <p style="font-family:'Arvo',serif; font-size:clamp(14px,1.3vw,18px); color:#e2dccf; margin:18px 0 0;">Build your party package in seconds</p>
+    </div>
+    <div style="position:absolute; bottom:28px; left:50%; transform:translateX(-50%); z-index:10; color:#e7e1d5; font-size:26px; opacity:.8;">↓</div>
+  </section>
+
+  <!-- ===== STEPS ===== -->
+  <section style="max-width:1040px; margin:0 auto; padding:100px 40px 60px; display:flex; flex-direction:column; gap:110px;">
+
+    <div style="display:grid; grid-template-columns:230px 1fr; gap:50px; align-items:start;">
+      <div>
+        <div style="font-family:'Arvo',serif; font-weight:300; color:#c09d6c; font-size:80px; line-height:.9;">1</div>
+        <div style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.06em; font-size:26px; margin-top:8px;">Step One:</div>
+      </div>
+      <div>
+        <h3 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.04em; font-size:22px; margin:6px 0 18px;">Get a Quote:</h3>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0 0 16px;">They say you can't put a price on a good time – but for us, it's a cinch!</p>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0 0 16px;"><a href="#" style="color:#c09d6c;">Click here</a> to swing by our bespoke, interactive package building platform. Viewing on a laptop or desktop makes it a piece of cake to navigate and use.</p>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0 0 16px;">Next, just enter your event details and you'll be offered a range of package options to build from. Every single one of 'em has been carefully put together to cover all aspects of your bar experience.</p>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0;">Not sure which package is best for you? Jump on over to our <a href="#" style="color:#c09d6c;">FAQ page</a> and it should enlighten ya.</p>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:230px 1fr; gap:50px; align-items:start;">
+      <div>
+        <div style="font-family:'Arvo',serif; font-weight:300; color:#c09d6c; font-size:80px; line-height:.9;">2</div>
+        <div style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.06em; font-size:26px; margin-top:8px;">Step Two:</div>
+      </div>
+      <div>
+        <h3 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.04em; font-size:22px; margin:6px 0 18px;">Customize:</h3>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0 0 16px;">Ok, the package is in the bag – now make it yours…</p>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0 0 16px;">Each base package is a complete, all-inclusive offering designed to take the heavy lifting out of event planning. We'll automatically figure out your recommended staffing and alcohol needs to give you an instant, accurate proposal. But here's the really fun part:</p>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0 0 16px;">Everything within the package is fully customizable – the first tab you see once you select a package option will be 'Bar Package' – think of this as a foundation to build upon.</p>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0;">Browse through our category menus to add any signature drinks you desire from our extensive menu of classic & specialty cocktails, upgrade your liquor choices to suit your guests' tastes, level up your ice game & upgrade your glassware/tossware.</p>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:230px 1fr; gap:50px; align-items:start;">
+      <div>
+        <div style="font-family:'Arvo',serif; font-weight:300; color:#c09d6c; font-size:80px; line-height:.9;">3</div>
+        <div style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.06em; font-size:26px; margin-top:8px;">Step Three:</div>
+      </div>
+      <div>
+        <h3 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.04em; font-size:22px; margin:6px 0 18px;">Confirm Staffing:</h3>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0;">We'll work out the number of staff needed to ensure your event runs smoother than a horse on skates. But please go ahead and add more if you'd like support on an additional satellite bar or any other hospitality help.</p>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:230px 1fr; gap:50px; align-items:start;">
+      <div>
+        <div style="font-family:'Arvo',serif; font-weight:300; color:#c09d6c; font-size:80px; line-height:.9;">4</div>
+        <div style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.06em; font-size:26px; margin-top:8px;">Step Four:</div>
+      </div>
+      <div>
+        <h3 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.04em; font-size:22px; margin:6px 0 18px;">Submit Proposal:</h3>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0 0 16px;">Once you're happy with your choices click 'Submit Proposal' and one of our event smartypants people will get back to you pronto to arrange a quick consultation. We'll review and fine-tune your package with you and answer any questions you might have. After that, it's over to us!</p>
+        <p style="font-size:16.5px; line-height:1.75; color:#c4bdb0; margin:0;">Don't worry if you are unsure of any aspect of your package – we can perfect and tweak it together on your consultation. Have a little fun with your initial setup – it's a party after all!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAKE YOURS A CLASSIC ===== -->
+  <section style="padding:60px 40px 100px; text-align:center;">
+    <div style="position:relative; max-width:600px; margin:0 auto; padding:80px 40px;">
+      <div style="position:absolute; inset:0; border:1px solid rgba(192,157,108,.5);"></div>
+      <h2 style="position:relative; font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.04em; font-size:clamp(30px,3.6vw,46px); line-height:1.08; margin:0 0 16px;">Make Yours a Classic…</h2>
+      <p style="position:relative; font-size:16px; color:#c4bdb0; margin:0 0 28px;">Check availability for your event now</p>
+      <a href="#" style="position:relative; font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:#f2ecdf; border:1px solid rgba(242,236,223,.75); padding:14px 30px; display:inline-flex; align-items:center; gap:12px;" style-hover="background:#c09d6c; border-color:#c09d6c; color:#161616;">Book Now <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== INSTAGRAM ===== -->
+  <section style="padding:20px 40px 70px; text-align:center;">
+    <h2 style="font-family:'Arvo',serif; font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:clamp(26px,3vw,38px); margin:0 0 44px; color:#efe9dc;">The Latest on <span style="color:#c09d6c;">Instagram</span></h2>
+    <div style="max-width:1120px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:18px;">
+      <div style="aspect-ratio:1;"><image-slot id="hwig1" shape="rect" fit="cover" placeholder="Instagram post 1"></image-slot></div>
+      <div style="aspect-ratio:1;"><image-slot id="hwig2" shape="rect" fit="cover" placeholder="Instagram post 2"></image-slot></div>
+      <div style="aspect-ratio:1;"><image-slot id="hwig3" shape="rect" fit="cover" placeholder="Instagram post 3"></image-slot></div>
+      <div style="aspect-ratio:1;"><image-slot id="hwig4" shape="rect" fit="cover" placeholder="Instagram post 4"></image-slot></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="padding:40px 40px 46px; text-align:center; border-top:1px solid rgba(192,157,108,.18);">
+    <div style="display:flex; justify-content:center; gap:22px; margin-bottom:22px; color:#c09d6c;">
+      <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.37H7.7V13h2.7v8h3.1z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+    <p style="font-family:'Arvo',serif; font-size:12px; letter-spacing:.08em; color:#7d766a; margin:0;">© 2026 The Old Fashioned Cocktail Co. — All rights reserved.</p>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

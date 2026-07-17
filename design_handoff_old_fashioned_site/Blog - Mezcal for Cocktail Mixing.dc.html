@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Arvo', serif; }
+  h1, h2, h3 { font-family: 'Bosque', 'Josefin Sans', sans-serif !important; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #d9c4a6; }
+  ::selection { background: #c09d6c; color: #161616; }
+</style>
+</helmet>
+
+<div style="background:#161616; color:#c9c2b6; font-family:'Arvo',serif; overflow-x:hidden;">
+
+  <!-- ===== NAV (solid) ===== -->
+  <nav style="display:flex; align-items:center; justify-content:space-between; padding:22px 46px; font-family:'Arvo',serif; background:#131313; border-bottom:1px solid rgba(192,157,108,.14);">
+    <div style="display:flex; align-items:center; gap:18px; color:#c09d6c; font-size:15px; flex:1;">
+      <a href="#" aria-label="Facebook" style="opacity:.85;"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.37H7.7V13h2.7v8h3.1z"/></svg></a>
+      <a href="#" aria-label="Instagram" style="opacity:.85;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+    <div style="display:flex; align-items:center; gap:26px; text-transform:uppercase; letter-spacing:.14em; font-size:12.5px; color:#e7e1d5;">
+      <a href="Old Fashioned Cocktail Co.dc.html">Home</a>
+      <a href="All Events.dc.html">Events ▾</a>
+      <a href="How It Works.dc.html">How It Works</a>
+      <img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2020/06/The-Old-Fashoioned-Primary-Light.png" alt="The Old Fashioned Cocktail Co" style="height:52px; margin:0 8px; object-fit:contain;">
+      <a href="Our Fleet.dc.html">Our Fleet</a>
+      <a href="Blog.dc.html" style="color:#c09d6c;">About ▾</a>
+      <a href="#">Contact</a>
+    </div>
+    <div style="flex:1; display:flex; justify-content:flex-end;">
+      <a href="#" style="border:1px solid #c09d6c; color:#e7e1d5; text-transform:uppercase; letter-spacing:.14em; font-size:11px; padding:11px 20px;">Instant Quote</a>
+    </div>
+  </nav>
+
+  <!-- ===== ARTICLE ===== -->
+  <article style="max-width:820px; margin:0 auto; padding:70px 40px 40px;">
+    <p style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.08em; color:#c09d6c; font-size:12px; text-align:center; margin:0 0 16px;"><a href="Blog.dc.html">Old Fashioned Connoisseur Club</a></p>
+    <h1 style="font-family:'Arvo',serif; font-weight:600; color:#f2ecdf; text-transform:uppercase; letter-spacing:.02em; font-size:clamp(30px,4vw,52px); line-height:1.08; text-align:center; margin:0 0 20px;">Mezcal for Cocktail Mixing</h1>
+    <p style="font-family:'Arvo',serif; letter-spacing:.05em; font-size:12px; color:#8a8377; text-transform:uppercase; text-align:center; margin:0 0 40px;">By Tim Brown &nbsp;·&nbsp; February 4, 2021</p>
+
+    <div style="width:100%; aspect-ratio:16/9; overflow:hidden; margin-bottom:44px;"><img src="https://theoldfashionedcocktailco.com/wp-content/uploads/2021/02/mezcal__drink_with_oranges_on_a_beach-900x536.jpg" alt="Mezcal drink with oranges" style="width:100%; height:100%; object-fit:cover;"></div>
+
+    <div style="font-size:17px; line-height:1.8; color:#c4bdb0;">
+      <h2 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.03em; font-size:23px; margin:0 0 18px;">Welcome back to The Old Fashioned Connoisseur Club</h2>
+      <p style="margin:0 0 22px;">In this blog series we'll be imparting a few tidbits of our hard-earned knowledge, distilled over years of slingin' bottles and mixing up a storm.</p>
+      <p style="margin:0 0 22px;">Previously we've <a href="Blog - Choosing Whiskey for Cocktails.dc.html" style="color:#c09d6c;">looked deep into whiskey</a>, and this time out we're headin' south of the border to give mezcal a well-deserved mention.</p>
+
+      <h2 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.03em; font-size:23px; margin:40px 0 18px;">Why drink mezcal?</h2>
+      <p style="margin:0 0 22px;">Mexican legend says the first mezcal was created when a lightning bolt struck an agave plant. We wouldn't argue the point. It's as close as you'll get to lightning in a bottle – a spirit right after our own heart.</p>
+      <p style="margin:0 0 22px;">Mezcal is a certified classic with a ton of character – we're talkin' complex flavor profiles, artisanal, small-batch production methods, and plenty of smoke! If you like to indulge your wild and experimental side, mezcal might just become your new best drinking buddy.</p>
+      <p style="margin:0 0 22px;">Mezcal is made from the heart of the agave plant. There are over 200 different varieties of agave, and mezcal can be produced using around 30-40 of them. The process involves heating agave in earth-covered ovens with rocks, wood and charcoal, followed by distillation in clay pots. But most mezcaleros have their own unique methods, so different mezcals pack a whole bunch of unique characteristics.</p>
+      <p style="margin:0 0 22px;">Want to get your mitts on some? It's widely available in the US, but a genuine mezcal must originate from Mexico. Just like Scotch Whisky must be from Scotland. Mezcal is produced in a bunch of different regions, with Oaxaca being the main one.</p>
+
+      <h2 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.03em; font-size:23px; margin:40px 0 18px;">How is mezcal different from tequila?</h2>
+      <p style="margin:0 0 22px;">We're willing to bet you're already acquainted (perhaps too acquainted) with mezcal's more famous compatriot, tequila.</p>
+      <p style="margin:0 0 22px;">Tequila is actually a type of mezcal, made from a specific variety of blue agave and distilled above ground in copper stills. This makes it smoother and less smoky than other mezcals, but means the flavor, broadly speaking, isn't as complex.</p>
+      <p style="margin:0 0 22px;">Another key difference you might've heard is that 'real' mezcal should have a worm in the bottle, right? Nope. In fact, that's total baloney.</p>
+      <p style="margin:0 0 22px;">The 'worm' is actually a moth larva, and it was originally added by one mezcal brand as a marketing stunt. It's not a traditional ingredient, and eating it won't make you hallucinate. If anything, it's just a handy pre-packed party snack…</p>
+
+      <h2 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.03em; font-size:23px; margin:40px 0 18px;">Mezcal types</h2>
+      <p style="margin:0 0 22px;">Great news for the impatient – the most common type of mezcal, Joven (young), is a clear, unaged spirit that's born ready to drink.</p>
+      <p style="margin:0 0 22px;">Even the aged types turn around pretty quick. Reposado hangs out in oak for more than two months but less than a year, while Anejo sits for between one and three years until it's ready.</p>
+      <p style="margin:0 0 22px;">But because every mezcal already possesses its own cool characteristics, our attitude is "why wait?" Mezcal doesn't need much oak added to the mix, so get to sippin' it clear and let the good times roll.</p>
+
+      <h2 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.03em; font-size:23px; margin:40px 0 18px;">How to taste mezcal</h2>
+      <p style="margin:0 0 22px;">Mezcal is unusual in that we'd recommend you try it in a cocktail first. The flavor doesn't respond as well to adding water as whiskey, so the proof can take some getting used to for first-timers. You might want to test out our cocktail suggestions below to develop an idea of whether you and mezcal will get along.</p>
+      <p style="margin:0 0 22px;">What's that? You want to dive straight in anyway? Good on ya, champ! In that case, go steady. Sip the mezcal slowly – don't shot it. And approach the tasting as you would with a wine.</p>
+      <p style="margin:0 0 22px;">There are so many complex factors involved with the ingredients and production of mezcal that even specific brands might not taste the same from one year to the next. That's all part of the beauty of becoming a mezcal aficionado – live in the moment and savor the spirit that's in your glass right now!</p>
+
+      <h2 style="font-family:'Arvo',serif; font-weight:600; color:#c09d6c; text-transform:uppercase; letter-spacing:.03em; font-size:23px; margin:40px 0 18px;">The Old Fashioned Choice</h2>
+      <p style="margin:0 0 22px;">Here's our take on the best mezcal cocktails:</p>
+
+      <h3 style="font-family:'Arvo',serif; font-weight:600; color:#e7e1d5; text-transform:uppercase; letter-spacing:.03em; font-size:18px; margin:30px 0 12px;">The Oaxaca Old Fashioned</h3>
+      <p style="margin:0 0 16px;">Ya might've guessed this would be one of our favorites. To mix yours, follow the steps we outlined <a href="Blog - Old Fashioned Cocktail.dc.html" style="color:#c09d6c;">here</a> – just substitute bourbon for mezcal. Enjoy!</p>
+      <p style="font-family:'Arvo',serif; font-weight:600; color:#e7e1d5; letter-spacing:.03em; font-size:14px; text-transform:uppercase; margin:0 0 10px;">Ingredients:</p>
+      <ul style="margin:0 0 24px; padding-left:22px;">
+        <li style="margin-bottom:6px;">2oz Mezcal</li>
+        <li style="margin-bottom:6px;">3 dashes Bittermens Xocolatl Mole bitters</li>
+        <li style="margin-bottom:6px;">1 x sugar cube or Simple Syrup</li>
+        <li style="margin-bottom:6px;">Traditional orange peel garnish</li>
+        <li>1 x maraschino cherry</li>
+      </ul>
+
+      <h3 style="font-family:'Arvo',serif; font-weight:600; color:#e7e1d5; text-transform:uppercase; letter-spacing:.03em; font-size:18px; margin:30px 0 12px;">Mezcal Manhattan</h3>
+      <p style="margin:0 0 16px;">Another Mexican sun-soaked twist on a classic, a mezcal manhattan gives the liquor plenty of room to showcase its individual style without compromising any of its traditional appeal. Tipping one offers the sensation of feeling right at home in an unfamiliar city.</p>
+      <p style="margin:0 0 16px;">Add the ingredients to a shaker with ice and stir, then strain into a cocktail glass (or a lowball on the rocks if you prefer). Garnish with orange peel and enjoy!</p>
+      <p style="font-family:'Arvo',serif; font-weight:600; color:#e7e1d5; letter-spacing:.03em; font-size:14px; text-transform:uppercase; margin:0 0 10px;">Ingredients:</p>
+      <ul style="margin:0 0 24px; padding-left:22px;">
+        <li style="margin-bottom:6px;">2 oz Mezcal</li>
+        <li style="margin-bottom:6px;">1 oz Sweet Vermouth</li>
+        <li style="margin-bottom:6px;">3 dashes Angostura Bitters</li>
+        <li>Traditional orange peel garnish</li>
+      </ul>
+
+      <h3 style="font-family:'Arvo',serif; font-weight:600; color:#e7e1d5; text-transform:uppercase; letter-spacing:.03em; font-size:18px; margin:30px 0 12px;">Mezcal Mary</h3>
+      <p style="margin:0 0 16px;">Mezcal Mary is your spicy savior the morning after the night before (or whenever you fancy). This alternative take on a classic Bloody Mary really dials up the heat. Smoky mezcal notes and bacon garnish offer a savory undertone that perfectly offsets the fruity spice of tomato juice and pureed jalapenos. Caliente!</p>
+      <p style="margin:0 0 16px;">Pour your mezcal and tomato juice into a pitcher and stir. Then add a squeeze of lime and enough jalapeno puree to give your cocktail a kick. Serve in a Collins glass rimmed with lime, salt and chilli powder, and garnish with a crispy bacon swizzle stick.</p>
+      <p style="font-family:'Arvo',serif; font-weight:600; color:#e7e1d5; letter-spacing:.03em; font-size:14px; text-transform:uppercase; margin:0 0 10px;">Ingredients:</p>
+      <ul style="margin:0 0 10px; padding-left:22px;">
+        <li style="margin-bottom:6px;">12oz mezcal</li>
+        <li style="margin-bottom:6px;">24oz tomato juice</li>
+        <li style="margin-bottom:6px;">6oz fresh lime juice</li>
+        <li style="margin-bottom:6px;">1/4 cup jalapeno puree</li>
+        <li style="margin-bottom:6px;">Salt</li>
+        <li style="margin-bottom:6px;">Chilli powder</li>
+        <li>Bacon swizzle stick garnish</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- prev/next -->
+  <div style="max-width:820px; margin:0 auto; padding:30px 40px 70px; display:flex; justify-content:flex-end; border-top:1px solid rgba(192,157,108,.18);">
+    <a href="Blog - Choosing Whiskey for Cocktails.dc.html" style="text-align:right;">
+      <div style="font-family:'Arvo',serif; text-transform:uppercase; letter-spacing:.1em; font-size:11px; color:#8a8377; margin-bottom:6px;">Next Post →</div>
+      <div style="font-family:'Arvo',serif; color:#c09d6c; font-size:16px;">Choosing Whiskey for Cocktails</div>
+    </a>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="padding:40px 40px 46px; text-align:center; border-top:1px solid rgba(192,157,108,.18);">
+    <div style="display:flex; justify-content:center; gap:22px; margin-bottom:22px; color:#c09d6c;">
+      <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.37H7.7V13h2.7v8h3.1z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+    <p style="font-family:'Arvo',serif; font-size:12px; letter-spacing:.08em; color:#7d766a; margin:0;">© 2026 The Old Fashioned Cocktail Co. — All rights reserved.</p>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>
