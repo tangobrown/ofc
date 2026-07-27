@@ -15,7 +15,7 @@ export default function AboutPage() {
     <PageShell>
       <Hero
         image="/images/about-hero.jpg"
-        imageAlt="Bartender mixing a cocktail at the mobile bar"
+        imageAlt="Dwayne, founder of The Old Fashioned Cocktail Co."
         title="About Us"
         subtitle="Hard Liquor. Easy Parties."
         showArrow
