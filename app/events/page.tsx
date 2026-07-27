@@ -17,7 +17,8 @@ export default function EventsPage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="Bartender pouring, smoke & whiskey bottle"
+        image="/images/events-hero.jpg"
+        imageAlt="A cocktail being served at an event"
         title="Mobile Cocktail Bar for Events"
         subtitle="What's your occasion?"
         showArrow

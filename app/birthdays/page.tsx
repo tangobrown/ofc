@@ -19,7 +19,8 @@ export default function BirthdaysPage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="Bartender pouring, smoke & whiskey bottle"
+        image="/images/birthdays-hero.jpg"
+        imageAlt="A cocktail being served at an event"
         title={
           <>
             Make Your Party a
