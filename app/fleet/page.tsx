@@ -69,7 +69,8 @@ export default function FleetPage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="Oak bar & vintage car in garage"
+        image="/images/cocktail-bar-outside.jpg"
+        imageAlt="The mobile cocktail bar set up outdoors"
         title="Meet the Fleet"
         subtitle="Meet our fleet mobile cocktail bars"
         showArrow

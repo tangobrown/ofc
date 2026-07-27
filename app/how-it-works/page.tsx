@@ -13,7 +13,8 @@ export default function HowItWorksPage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="Oak bar & vintage car in garage"
+        image="/images/cocktail-bar-outside.jpg"
+        imageAlt="The mobile cocktail bar set up outdoors"
         title="Build Your Package"
         subtitle="Build your party package in seconds"
         subtitleItalic={false}
