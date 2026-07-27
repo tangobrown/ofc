@@ -1,28 +1,18 @@
-import { Arvo, Josefin_Sans } from "next/font/google";
+import localFont from "next/font/local";
 
-// Body: Arvo slab serif (400 / 700, + italic 400)
-export const arvo = Arvo({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-arvo",
+// Display / headings — "Bosque" (supplied as Little Bosquee). Single-weight face;
+// the "400 700" range lets heading weights render the real outlines without faux-bold.
+export const bosque = localFont({
+  src: "./fonts/LittleBosquee.ttf",
+  variable: "--font-display",
+  weight: "400 700",
   display: "swap",
 });
 
-// Display fallback for Bosque until the client supplies the .woff2.
-// When Bosque arrives, add it via next/font/local and set --font-bosque; the
-// Tailwind `font-display` chain already prefers --font-bosque first.
-export const josefin = Josefin_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  variable: "--font-josefin",
+// Body — Lumier. Kept at 400 so <strong>/bold text still reads as emphasized.
+export const lumier = localFont({
+  src: "./fonts/LumierRegular.ttf",
+  variable: "--font-body",
+  weight: "400",
   display: "swap",
 });
-
-// ── When Bosque is available, uncomment and drop the .woff2 in app/fonts/ ──
-// import localFont from "next/font/local";
-// export const bosque = localFont({
-//   src: "./fonts/Bosque.woff2",
-//   variable: "--font-bosque",
-//   display: "swap",
-// });

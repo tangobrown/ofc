@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { arvo, josefin } from "./fonts";
+import { bosque, lumier } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${arvo.variable} ${josefin.variable}`}>
+    <html lang="en" className={`${bosque.variable} ${lumier.variable}`}>
       <body className="bg-bg text-body font-body">{children}</body>
     </html>
   );

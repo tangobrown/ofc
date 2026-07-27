@@ -45,16 +45,22 @@ npm run start    # serve the production build
 Colours, fonts, spacing and interactions all follow the handoff's tokens
 (`bg #161616`, `gold #c09d6c`, `cream #d9c4a6`, etc.). See `tailwind.config.ts`.
 
+## Fonts
+
+Self-hosted via `next/font/local` (see [`app/fonts.ts`](app/fonts.ts), files in `app/fonts/`):
+- **Headings** — Bosque (supplied as *Little Bosquee*) → Tailwind `font-display`.
+- **Body / nav / buttons** — Lumier → Tailwind `font-body`.
+
+Both are single-weight faces. Bosque is declared over a `400 700` range so heading
+weights render the real outlines (no faux-bold); Lumier stays `400` so `<strong>`
+still reads as emphasized.
+
 ## Outstanding / to wire up
 
-- **Bosque display font** — the client will supply the `.woff2`. Until then headings
-  fall back to Josefin Sans (weight 600, uppercase). To add it: drop the file in
-  `app/fonts/`, uncomment the `localFont` block in [`app/fonts.ts`](app/fonts.ts),
-  and add `bosque.variable` to the `<html>` className in `app/layout.tsx`. The
-  Tailwind `font-display` chain already prefers `--font-bosque` first.
 - **Photography** — most photos are `<Placeholder>` panels labelled with the
   intended shot. Replace with the client's real images (`next/image`). A number of
   photos already use the client's hosted CDN (`theoldfashionedcocktailco.com`).
-- **Instagram feed** — `InstagramGrid` renders static placeholders; wire to a real feed.
+- **Instagram feed** — set `BEHOLD_FEED_ID` (see `.env.example`) to populate the
+  "The Latest on Instagram" section; it stays hidden until then.
 - **Forms / booking / "Instant Quote"** — the contact form and the various
   Book Now / Instant Quote buttons are not yet wired to a backend.

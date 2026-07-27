@@ -25,10 +25,10 @@ const config: Config = {
         "muted-2": "#7d766a",
       },
       fontFamily: {
-        // Body slab-serif
-        body: ["var(--font-arvo)", "Arvo", "serif"],
-        // Display deco (Bosque supplied later via local; Josefin fallback)
-        display: ["var(--font-bosque)", "var(--font-josefin)", "Josefin Sans", "sans-serif"],
+        // Body — Lumier (self-hosted local font)
+        body: ["var(--font-body)", "Georgia", "serif"],
+        // Display / headings — Bosque / Little Bosquee (self-hosted local font)
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
       letterSpacing: {
         eyebrow: "0.05em",
