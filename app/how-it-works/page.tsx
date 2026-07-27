@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
-import DecoFrameCta from "@/components/DecoFrameCta";
+import FlappersCta from "@/components/FlappersCta";
 
 export const metadata: Metadata = {
   title: "How It Works",
@@ -145,11 +145,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <DecoFrameCta
-        title="Make Yours a Classic…"
-        subtitle="Check availability for your event now"
-        cta={{ label: "Book Now", href: "#" }}
-      />
+      <FlappersCta subtitle="Check availability for your event now" />
 
     </PageShell>
   );

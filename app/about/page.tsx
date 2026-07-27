@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import OffsetSection from "@/components/OffsetSection";
-import DecoFrameCta from "@/components/DecoFrameCta";
+import FlappersCta from "@/components/FlappersCta";
 import { IMG } from "@/lib/images";
 
 export const metadata: Metadata = {
@@ -77,11 +77,7 @@ export default function AboutPage() {
         </p>
       </OffsetSection>
 
-      <DecoFrameCta
-        title="Make Yours a Classic…"
-        subtitle="Check availability for your event now"
-        cta={{ label: "Book Now", href: "#" }}
-      />
+      <FlappersCta subtitle="Check availability for your event now" />
 
     </PageShell>
   );

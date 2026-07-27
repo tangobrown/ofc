@@ -3,7 +3,7 @@ import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import OffsetSection from "@/components/OffsetSection";
-import DecoFrameCta from "@/components/DecoFrameCta";
+import FlappersCta from "@/components/FlappersCta";
 import Button from "@/components/Button";
 import { IMG } from "@/lib/images";
 
@@ -107,7 +107,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <DecoFrameCta title="Make Yours a Classic…" cta={{ label: "Book Now", href: "#" }} />
+      <FlappersCta />
 
     </PageShell>
   );
