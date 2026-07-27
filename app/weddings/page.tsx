@@ -26,7 +26,8 @@ export default function WeddingsPage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="Bartender pouring, smoke & whiskey bottle"
+        image="/images/weddings-hero.jpg"
+        imageAlt="Cocktail being served at a wedding"
         title={
           <>
             Mobile Cocktail Bar for
