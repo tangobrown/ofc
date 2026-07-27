@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import EventCarousel from "@/components/EventCarousel";
+import { EVENT_CAROUSEL } from "@/lib/carousel";
 import OffsetSection from "@/components/OffsetSection";
 import FleetRows from "@/components/FleetRows";
 import FlappersCta from "@/components/FlappersCta";
@@ -13,14 +14,6 @@ export const metadata: Metadata = {
     "Book New York's best mobile cocktail bar and wow your wedding guests with vintage speakeasy style.",
 };
 
-const CAROUSEL = [
-  { alt: "Bartender & cocktails" },
-  { alt: "Tommy Gun cart, floral" },
-  { alt: "Oak bar interior" },
-  { alt: "Close-up cocktail" },
-  { alt: "Ingredients for cocktails" },
-  { alt: "Cocktail in progress" },
-];
 
 export default function WeddingsPage() {
   return (
@@ -40,7 +33,7 @@ export default function WeddingsPage() {
         cta={{ label: "Check Availability", href: "#" }}
       />
 
-      <EventCarousel items={CAROUSEL} />
+      <EventCarousel items={EVENT_CAROUSEL} />
 
       <OffsetSection
         heading="Gettin' Hitched?"
