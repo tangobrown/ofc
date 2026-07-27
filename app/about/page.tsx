@@ -14,7 +14,8 @@ export default function AboutPage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="Oak bar & vintage car in garage"
+        image="/images/about-hero.jpg"
+        imageAlt="Bartender mixing a cocktail at the mobile bar"
         title="About Us"
         subtitle="Hard Liquor. Easy Parties."
         showArrow
