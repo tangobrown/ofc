@@ -70,7 +70,7 @@ export default function Nav({ variant = "overlay" }: { variant?: NavVariant }) {
         <div className="hidden flex-1 justify-end lg:flex">
           <a
             href="#"
-            className="border border-gold px-5 py-[11px] text-[11px] uppercase tracking-nav text-text-hi transition-colors hover:bg-gold hover:text-bg"
+            className="border border-gold px-5 py-[11px] text-[14px] uppercase tracking-nav text-text-hi transition-colors hover:bg-gold hover:text-bg"
           >
             Instant Quote
           </a>
@@ -236,7 +236,7 @@ function MobileDrawer({
         </ul>
         <a
           href="#"
-          className="mt-8 inline-flex border border-gold px-5 py-3 text-[11px] uppercase tracking-nav text-text-hi transition-colors hover:bg-gold hover:text-bg"
+          className="mt-8 inline-flex border border-gold px-5 py-3 text-[14px] uppercase tracking-nav text-text-hi transition-colors hover:bg-gold hover:text-bg"
         >
           Instant Quote
         </a>

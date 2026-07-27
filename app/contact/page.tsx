@@ -56,7 +56,7 @@ export default function ContactPage() {
           </label>
           <button
             type="submit"
-            className="btn-outline mt-2 self-start border-[rgba(242,236,223,0.75)] px-[28px] py-[13px] text-[12px]"
+            className="btn-outline mt-2 self-start border-[rgba(242,236,223,0.75)] px-[28px] py-[13px] text-[14px]"
           >
             Send Enquiry <span aria-hidden="true">→</span>
           </button>
