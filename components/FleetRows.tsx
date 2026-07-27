@@ -1,17 +1,16 @@
 import Image from "next/image";
 import Button from "./Button";
-import DecoSeparator from "./DecoSeparator";
 import { FLEET } from "@/lib/fleet";
 
 /**
- * "Meet Our Fleet" as used on the standard event pages: a deco separator, a
- * left-aligned heading, then two image + text rows (Learn More → /fleet#…).
+ * "Meet Our Fleet" as used on the standard event pages: a tonal band (bg-alt) to
+ * break it from the section above, a left-aligned heading, then two image + text
+ * rows (Learn More → /fleet#…).
  */
 export default function FleetRows() {
   return (
-    <>
-      <DecoSeparator className="mx-auto mt-[70px] max-w-content px-10" />
-      <section className="mx-auto max-w-content px-10 pb-10 pt-[120px]">
+    <section className="bg-bg-alt py-20 md:py-28">
+      <div className="mx-auto max-w-content px-10">
         <h2 className="m-0 mb-[50px] font-display text-[clamp(31px,3.6vw,47px)] font-semibold uppercase tracking-[0.03em] text-gold">
           Meet Our Fleet
         </h2>
@@ -33,7 +32,7 @@ export default function FleetRows() {
             </div>
           ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
