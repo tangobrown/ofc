@@ -33,3 +33,8 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const LOGO_SRC =
   "https://theoldfashionedcocktailco.com/wp-content/uploads/2020/06/The-Old-Fashoioned-Primary-Light.png";
+
+export const SOCIAL = {
+  facebook: "https://www.facebook.com/theoldfashionedcocktailco/",
+  instagram: "https://www.instagram.com/theoldfashionedcocktailco/",
+} as const;

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { NAV_ITEMS, LOGO_SRC, type NavItem } from "@/lib/nav";
+import { NAV_ITEMS, LOGO_SRC, SOCIAL, type NavItem } from "@/lib/nav";
 import { FacebookIcon, InstagramIcon } from "./icons";
 
 type NavVariant = "overlay" | "solid";
@@ -32,11 +32,23 @@ export default function Nav({ variant = "overlay" }: { variant?: NavVariant }) {
       <nav className="flex items-center justify-between px-6 py-[22px] md:px-[46px] font-ui">
         {/* Left: socials */}
         <div className="hidden flex-1 items-center gap-[18px] text-gold lg:flex">
-          <a href="#" aria-label="Facebook" className="opacity-85 hover:opacity-100">
-            <FacebookIcon size={15} />
+          <a
+            href={SOCIAL.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="opacity-85 hover:opacity-100"
+          >
+            <FacebookIcon size={21} />
           </a>
-          <a href="#" aria-label="Instagram" className="opacity-85 hover:opacity-100">
-            <InstagramIcon size={15} />
+          <a
+            href={SOCIAL.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="opacity-85 hover:opacity-100"
+          >
+            <InstagramIcon size={21} />
           </a>
         </div>
 
@@ -48,7 +60,7 @@ export default function Nav({ variant = "overlay" }: { variant?: NavVariant }) {
             <img
               src={LOGO_SRC}
               alt="The Old Fashioned Cocktail Co."
-              className="h-[56px] w-auto object-contain"
+              className="h-[90px] w-auto object-contain"
             />
           </Link>
           <NavGroup items={rightLinks} pathname={pathname} />
@@ -68,7 +80,7 @@ export default function Nav({ variant = "overlay" }: { variant?: NavVariant }) {
         <div className="flex w-full items-center justify-between lg:hidden">
           <Link href="/" aria-label="Home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={LOGO_SRC} alt="The Old Fashioned Cocktail Co." className="h-[44px] w-auto object-contain" />
+            <img src={LOGO_SRC} alt="The Old Fashioned Cocktail Co." className="h-[64px] w-auto object-contain" />
           </Link>
           <button
             type="button"
