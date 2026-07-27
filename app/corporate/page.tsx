@@ -26,7 +26,8 @@ export default function CorporatePage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="Bartender pouring, smoke & whiskey bottle"
+        image="/images/corporate-hero.jpg"
+        imageAlt="A cocktail being served at an event"
         title={
           <>
             Mobile Cocktail Bar for
