@@ -35,7 +35,7 @@ export default async function InstagramFeed() {
 
   return (
     <section className="px-6 pb-[70px] pt-10 text-center md:px-10">
-      <h2 className="m-0 mb-11 font-display text-[clamp(26px,3vw,38px)] font-semibold uppercase tracking-[0.05em] text-[#efe9dc]">
+      <h2 className="m-0 mb-11 font-display text-[clamp(29px,3.3vw,43px)] font-semibold uppercase tracking-[0.05em] text-[#efe9dc]">
         The Latest on <span className="text-gold">Instagram</span>
       </h2>
 

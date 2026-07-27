@@ -19,7 +19,7 @@ export default function DecoFrameCta({
         <div className="absolute inset-0 border border-[rgba(192,157,108,0.5)]" aria-hidden="true" />
         <div className="absolute -top-px left-[38%] right-[38%] h-[2px] bg-bg" aria-hidden="true" />
         <div className="absolute -bottom-px left-[38%] right-[38%] h-[2px] bg-bg" aria-hidden="true" />
-        <h2 className="relative m-0 mb-[30px] font-display text-[clamp(30px,3.6vw,46px)] font-semibold uppercase leading-[1.08] tracking-[0.04em] text-heading-light">
+        <h2 className="relative m-0 mb-[30px] font-display text-[clamp(34px,4vw,52px)] font-semibold uppercase leading-[1.18] tracking-[0.04em] text-heading-light">
           {title}
         </h2>
         {subtitle && (

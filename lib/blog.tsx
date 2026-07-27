@@ -14,8 +14,8 @@ export type BlogPost = {
 };
 
 const h2 =
-  "mt-12 mb-4 font-display text-[clamp(24px,2.6vw,34px)] font-semibold uppercase tracking-[0.03em] text-gold";
-const h3 = "mt-8 mb-3 font-display text-[20px] uppercase tracking-[0.02em] text-cream";
+  "mt-12 mb-4 font-display text-[clamp(27px,2.9vw,38px)] font-semibold uppercase tracking-[0.03em] text-gold";
+const h3 = "mt-8 mb-3 font-display text-[22px] uppercase tracking-[0.02em] text-cream";
 const p = "mb-5 text-[17px] leading-[1.8] text-body";
 const ul = "mb-5 list-disc pl-6 space-y-2 text-body";
 const cap = "mt-2 text-center text-[13px] italic text-muted";

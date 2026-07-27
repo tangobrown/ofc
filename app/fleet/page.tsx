@@ -96,7 +96,7 @@ export default function FleetPage() {
           </div>
 
           <div>
-            <h2 className="m-0 mb-5 font-display text-[clamp(28px,3vw,40px)] font-semibold uppercase leading-[1.08] tracking-[0.03em] text-gold">
+            <h2 className="m-0 mb-5 font-display text-[clamp(31px,3.4vw,45px)] font-semibold uppercase leading-[1.18] tracking-[0.03em] text-gold">
               {p.heading}
             </h2>
             <div className="rule-gold mb-[22px]" />
@@ -119,7 +119,7 @@ export default function FleetPage() {
 
       {/* CTA */}
       <section className="px-10 pb-[100px] pt-[70px] text-center">
-        <h2 className="m-0 mb-4 font-display text-[clamp(24px,2.6vw,34px)] font-semibold uppercase tracking-[0.03em] text-heading-light">
+        <h2 className="m-0 mb-4 font-display text-[clamp(27px,2.9vw,38px)] font-semibold uppercase tracking-[0.03em] text-heading-light">
           Book the &apos;Old Fashioned&apos; Now
         </h2>
         <p className="mb-[30px] text-[16px] text-body">

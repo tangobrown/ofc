@@ -25,7 +25,7 @@ export default function FlappersCta({
       </div>
       <div className="pointer-events-none absolute inset-0 bg-flappers-scrim" />
       <div className="relative z-[5] ml-[min(9vw,150px)] max-w-[340px] border border-[rgba(192,157,108,0.6)] bg-black/40 px-10 py-11 backdrop-blur-sm">
-        <h2 className="m-0 mb-4 font-display text-[30px] font-semibold uppercase leading-[1.1] tracking-[0.04em] text-gold">
+        <h2 className="m-0 mb-4 font-display text-[34px] font-semibold uppercase leading-[1.2] tracking-[0.04em] text-gold">
           {title}
         </h2>
         <p className="mb-7 text-[17px] leading-[1.6] text-[#d6cfc2]">{subtitle}</p>

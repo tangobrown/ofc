@@ -31,7 +31,7 @@ export default function OffsetSection({
   );
   const text = (
     <div className={imageSide === "right" ? "md:order-1" : ""}>
-      <h2 className="m-0 mb-[10px] font-display text-[clamp(26px,2.8vw,38px)] font-semibold uppercase tracking-[0.03em] text-heading-light">
+      <h2 className="m-0 mb-[10px] font-display text-[clamp(29px,3.1vw,43px)] font-semibold uppercase tracking-[0.03em] text-heading-light">
         {heading}
       </h2>
       {eyebrow && <p className="eyebrow mb-[18px] text-[15px]">{eyebrow}</p>}

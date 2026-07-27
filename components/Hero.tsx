@@ -44,7 +44,7 @@ export default function Hero({
       <div className="pointer-events-none absolute inset-0 bg-hero-scrim" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 pb-[60px] pt-[150px] text-center">
-        <h1 className="m-0 font-display text-[clamp(30px,4.4vw,58px)] font-semibold uppercase leading-[1.05] tracking-[0.03em] text-heading-light [text-shadow:0_2px_18px_rgba(0,0,0,.6)]">
+        <h1 className="m-0 font-display text-[clamp(34px,4.9vw,66px)] font-semibold uppercase leading-[1.14] tracking-[0.03em] text-heading-light [text-shadow:0_2px_18px_rgba(0,0,0,.6)]">
           {title}
         </h1>
         {subtitle && (

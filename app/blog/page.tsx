@@ -44,7 +44,7 @@ export default function BlogIndexPage() {
               </div>
               <div>
                 <p className="eyebrow mb-3 text-[13px] uppercase text-gold">{post.category}</p>
-                <h2 className="mb-4 font-display text-[clamp(22px,2.4vw,30px)] font-semibold uppercase tracking-[0.02em] leading-[1.12] text-cream group-hover:text-gold">
+                <h2 className="mb-4 font-display text-[clamp(25px,2.7vw,34px)] font-semibold uppercase tracking-[0.02em] leading-[1.2] text-cream group-hover:text-gold">
                   {post.title}
                 </h2>
                 <p className="mb-4 text-[16px] leading-[1.7] text-body">{post.excerpt}</p>

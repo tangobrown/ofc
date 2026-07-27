@@ -22,7 +22,7 @@ export default function HomePage() {
 
       {/* Speakeasy */}
       <section className="mx-auto grid max-w-prose grid-cols-1 gap-10 px-10 pb-[90px] pt-[120px] md:grid-cols-[1fr_1.35fr] md:gap-[60px]">
-        <h2 className="m-0 font-display text-[clamp(28px,3vw,40px)] font-semibold uppercase leading-[1.08] tracking-[0.04em] text-gold">
+        <h2 className="m-0 font-display text-[clamp(31px,3.4vw,45px)] font-semibold uppercase leading-[1.18] tracking-[0.04em] text-gold">
           The Speakeasy
           <br />
           That Finds You
@@ -45,7 +45,7 @@ export default function HomePage() {
 
       {/* Meet the Fleet */}
       <section className="mx-auto max-w-prose px-10 pb-20 pt-5">
-        <h2 className="m-0 mb-[46px] font-display text-[clamp(28px,3.4vw,44px)] font-semibold uppercase tracking-[0.03em] text-gold">
+        <h2 className="m-0 mb-[46px] font-display text-[clamp(31px,3.8vw,49px)] font-semibold uppercase tracking-[0.03em] text-gold">
           Meet the Fleet…
         </h2>
         <div className="grid grid-cols-1 gap-11 md:grid-cols-2">
@@ -60,7 +60,7 @@ export default function HomePage() {
                   className="object-cover"
                 />
               </div>
-              <h3 className="m-0 mb-[14px] font-display text-[20px] font-semibold uppercase tracking-[0.03em] text-gold">
+              <h3 className="m-0 mb-[14px] font-display text-[22px] font-semibold uppercase tracking-[0.03em] text-gold">
                 {m.name}
               </h3>
               <p className="mb-[22px] text-[16px] leading-[1.7] text-body-dim">{m.description}</p>

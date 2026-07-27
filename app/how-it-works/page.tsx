@@ -31,7 +31,7 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div>
-            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[22px] font-semibold uppercase tracking-[0.04em] text-gold">
+            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
               Get a Quote:
             </h3>
             <div className="space-y-4 text-[16.5px] leading-[1.75] text-body">
@@ -68,7 +68,7 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div>
-            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[22px] font-semibold uppercase tracking-[0.04em] text-gold">
+            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
               Customize:
             </h3>
             <div className="space-y-4 text-[16.5px] leading-[1.75] text-body">
@@ -103,7 +103,7 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div>
-            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[22px] font-semibold uppercase tracking-[0.04em] text-gold">
+            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
               Confirm Staffing:
             </h3>
             <div className="space-y-4 text-[16.5px] leading-[1.75] text-body">
@@ -125,7 +125,7 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div>
-            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[22px] font-semibold uppercase tracking-[0.04em] text-gold">
+            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
               Submit Proposal:
             </h3>
             <div className="space-y-4 text-[16.5px] leading-[1.75] text-body">

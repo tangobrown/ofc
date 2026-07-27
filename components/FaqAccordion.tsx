@@ -25,7 +25,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
                 className="flex w-full items-center justify-between gap-6 py-6 text-left"
               >
                 <span
-                  className={`font-display text-[clamp(17px,1.6vw,21px)] uppercase tracking-[0.02em] transition-colors ${
+                  className={`font-display text-[clamp(19px,1.8vw,24px)] uppercase tracking-[0.02em] transition-colors ${
                     isOpen ? "text-cream" : "text-gold"
                   }`}
                 >
