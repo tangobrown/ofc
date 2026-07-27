@@ -30,7 +30,7 @@ export default function ContactPage() {
         </p>
         <DecoSeparator className="my-10" />
 
-        <div className="mx-auto max-w-[600px] bg-white px-6 pb-6 pt-3 text-left md:px-8 md:pb-8 md:pt-4">
+        <div className="mx-auto max-w-[600px] overflow-hidden bg-white px-6 pb-6 pt-0 text-left md:px-8 md:pb-8">
           <DubsadoForm />
         </div>
       </section>

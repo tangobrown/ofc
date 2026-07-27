@@ -34,7 +34,9 @@ export default function DubsadoForm() {
         ref={iframeRef}
         src="https://hello.dubsado.com/public/form/view/620095a44d2c23d5cb3b0272"
         title="Contact form"
-        style={{ width: "1px", minWidth: "100%", border: 0 }}
+        // Negative top margin clips the Dubsado form's own top padding (its
+        // content is cross-origin, so it can't be styled directly). Tune if needed.
+        style={{ width: "1px", minWidth: "100%", border: 0, display: "block", marginTop: "-32px" }}
       />
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.14/iframeResizer.min.js"
