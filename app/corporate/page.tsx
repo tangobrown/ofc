@@ -63,6 +63,7 @@ export default function CorporatePage() {
       </OffsetSection>
 
       <OffsetSection
+        className="pb-24 md:pb-28"
         heading="Scotch or Soda?"
         imageSrc={IMG.events.barTender}
         imageAlt="Bartender at the bar"

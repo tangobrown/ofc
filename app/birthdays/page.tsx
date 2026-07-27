@@ -70,6 +70,7 @@ export default function BirthdaysPage() {
       </OffsetSection>
 
       <OffsetSection
+        className="pb-24 md:pb-28"
         heading={
           <>
             The Speakeasy That

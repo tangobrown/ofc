@@ -65,6 +65,7 @@ export default function WeddingsPage() {
       </OffsetSection>
 
       <OffsetSection
+        className="pb-24 md:pb-28"
         heading="You Swap Rings"
         eyebrow="…we make gin slings!"
         imageSrc={IMG.events.barTender}
