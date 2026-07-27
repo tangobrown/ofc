@@ -25,10 +25,12 @@ const config: Config = {
         "muted-2": "#7d766a",
       },
       fontFamily: {
-        // Body — Lumier (self-hosted local font)
-        body: ["var(--font-body)", "Georgia", "serif"],
+        // Body copy — Arvo slab serif
+        body: ["var(--font-arvo)", "Arvo", "serif"],
         // Display / headings — Bosque / Little Bosquee (self-hosted local font)
         display: ["var(--font-display)", "Georgia", "serif"],
+        // UI chrome — Lumier (navigation + buttons)
+        ui: ["var(--font-ui)", "Georgia", "serif"],
       },
       letterSpacing: {
         eyebrow: "0.05em",

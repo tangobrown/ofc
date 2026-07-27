@@ -47,13 +47,13 @@ Colours, fonts, spacing and interactions all follow the handoff's tokens
 
 ## Fonts
 
-Self-hosted via `next/font/local` (see [`app/fonts.ts`](app/fonts.ts), files in `app/fonts/`):
-- **Headings** — Bosque (supplied as *Little Bosquee*) → Tailwind `font-display`.
-- **Body / nav / buttons** — Lumier → Tailwind `font-body`.
+Three roles (see [`app/fonts.ts`](app/fonts.ts)):
+- **Headings** — Bosque (supplied as *Little Bosquee*, self-hosted) → Tailwind `font-display`.
+- **Body copy** — Arvo (Google, self-hosted by `next/font`) → Tailwind `font-body`.
+- **Navigation + buttons** — Lumier (self-hosted, files in `app/fonts/`) → Tailwind `font-ui`.
 
-Both are single-weight faces. Bosque is declared over a `400 700` range so heading
-weights render the real outlines (no faux-bold); Lumier stays `400` so `<strong>`
-still reads as emphasized.
+Bosque is declared over a `400 700` range so heading weights render the real
+outlines (no faux-bold); Lumier is a single `400` weight.
 
 ## Outstanding / to wire up
 

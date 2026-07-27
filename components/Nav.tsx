@@ -29,7 +29,7 @@ export default function Nav({ variant = "overlay" }: { variant?: NavVariant }) {
 
   return (
     <header className={wrapperCls}>
-      <nav className="flex items-center justify-between px-6 py-[22px] md:px-[46px] font-body">
+      <nav className="flex items-center justify-between px-6 py-[22px] md:px-[46px] font-ui">
         {/* Left: socials */}
         <div className="hidden flex-1 items-center gap-[18px] text-gold lg:flex">
           <a href="#" aria-label="Facebook" className="opacity-85 hover:opacity-100">
@@ -157,7 +157,7 @@ function MobileDrawer({
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
       <div className="absolute inset-0 bg-black/70" onClick={onClose} aria-hidden="true" />
-      <div className="absolute right-0 top-0 h-full w-[82%] max-w-[360px] overflow-y-auto bg-nav-bg px-8 py-8">
+      <div className="absolute right-0 top-0 h-full w-[82%] max-w-[360px] overflow-y-auto bg-nav-bg px-8 py-8 font-ui">
         <div className="mb-8 flex items-center justify-between">
           <span className="text-[12px] uppercase tracking-nav text-gold">Menu</span>
           <button

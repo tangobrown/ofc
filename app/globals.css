@@ -27,7 +27,7 @@
 @layer components {
   /* Outline "book now" style button. Fills gold on hover. */
   .btn-outline {
-    @apply inline-flex items-center gap-3 border font-body uppercase text-heading-light;
+    @apply inline-flex items-center gap-3 border font-ui uppercase text-heading-light;
     letter-spacing: 0.16em;
     transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
   }
