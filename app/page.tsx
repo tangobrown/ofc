@@ -3,7 +3,6 @@ import PageShell from "@/components/PageShell";
 import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 import FlappersCta from "@/components/FlappersCta";
-import InstagramGrid from "@/components/InstagramGrid";
 import Placeholder from "@/components/Placeholder";
 import { IMG } from "@/lib/images";
 import { FLEET } from "@/lib/fleet";
@@ -14,13 +13,6 @@ const GALLERY = [
   { label: "Close-up of cocktail", w: 250 },
   { label: "Cocktail making in progress", w: 340 },
   { label: "Ingredients for cocktails", w: 300 },
-];
-
-const IG_POSTS = [
-  { caption: "Summer nights done right 🍸 Book one of…", likes: "♡ 9   ♥ 5" },
-  { caption: "Creating unforgettable experiences, one cocktail…", likes: "♡ 42   ♥ 6" },
-  { caption: "Seasons are made in a designer to suit your…", likes: "♡ 21   ♥ 10" },
-  { caption: "The Tommy Gun Tap Truck is back and ready for…", likes: "♡ 15   ♥ 12" },
 ];
 
 export default function HomePage() {
@@ -95,8 +87,6 @@ export default function HomePage() {
       </section>
 
       <FlappersCta />
-
-      <InstagramGrid posts={IG_POSTS} showCaptions />
     </PageShell>
   );
 }

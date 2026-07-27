@@ -3,7 +3,6 @@ import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import FaqAccordion from "@/components/FaqAccordion";
 import DecoFrameCta from "@/components/DecoFrameCta";
-import InstagramGrid from "@/components/InstagramGrid";
 
 export const metadata: Metadata = {
   title: "FAQs",
@@ -200,7 +199,6 @@ export default function FaqsPage() {
         cta={{ label: "Get In Touch", href: "/contact" }}
       />
 
-      <InstagramGrid />
     </PageShell>
   );
 }

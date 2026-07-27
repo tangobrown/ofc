@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import DecoFrameCta from "@/components/DecoFrameCta";
-import InstagramGrid from "@/components/InstagramGrid";
 
 export const metadata: Metadata = {
   title: "How It Works",
@@ -152,7 +151,6 @@ export default function HowItWorksPage() {
         cta={{ label: "Book Now", href: "#" }}
       />
 
-      <InstagramGrid />
     </PageShell>
   );
 }

@@ -5,7 +5,6 @@ import EventCarousel from "@/components/EventCarousel";
 import OffsetSection from "@/components/OffsetSection";
 import FleetRows from "@/components/FleetRows";
 import FlappersCta from "@/components/FlappersCta";
-import InstagramGrid from "@/components/InstagramGrid";
 import { IMG } from "@/lib/images";
 
 export const metadata: Metadata = {
@@ -110,7 +109,6 @@ export default function BirthdaysPage() {
         }
       />
 
-      <InstagramGrid />
     </PageShell>
   );
 }

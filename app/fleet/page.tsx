@@ -3,7 +3,6 @@ import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import Button from "@/components/Button";
-import InstagramGrid from "@/components/InstagramGrid";
 import { IMG } from "@/lib/images";
 
 export const metadata: Metadata = {
@@ -135,7 +134,6 @@ export default function FleetPage() {
         </Button>
       </section>
 
-      <InstagramGrid />
     </PageShell>
   );
 }

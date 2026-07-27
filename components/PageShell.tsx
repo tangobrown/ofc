@@ -1,5 +1,6 @@
 import Nav from "./Nav";
 import Footer from "./Footer";
+import InstagramFeed from "./InstagramFeed";
 
 /**
  * Standard page wrapper. `navVariant="overlay"` (default) floats a transparent
@@ -16,6 +17,7 @@ export default function PageShell({
     <div className="relative min-h-screen overflow-x-hidden bg-bg text-body">
       <Nav variant={navVariant} />
       <main>{children}</main>
+      <InstagramFeed />
       <Footer />
     </div>
   );

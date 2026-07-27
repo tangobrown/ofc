@@ -4,7 +4,6 @@ import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import Placeholder from "@/components/Placeholder";
-import InstagramGrid from "@/components/InstagramGrid";
 import { POSTS } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -56,7 +55,6 @@ export default function BlogIndexPage() {
         </div>
       </section>
 
-      <InstagramGrid />
     </PageShell>
   );
 }

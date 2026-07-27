@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import OffsetSection from "@/components/OffsetSection";
 import DecoFrameCta from "@/components/DecoFrameCta";
 import Button from "@/components/Button";
-import InstagramGrid from "@/components/InstagramGrid";
 import { IMG } from "@/lib/images";
 
 export const metadata: Metadata = {
@@ -110,7 +109,6 @@ export default function EventsPage() {
 
       <DecoFrameCta title="Make Yours a Classic…" cta={{ label: "Book Now", href: "#" }} />
 
-      <InstagramGrid />
     </PageShell>
   );
 }
