@@ -18,7 +18,7 @@ export default function FlappersCta({
   image?: string;
 }) {
   return (
-    <section className="relative flex min-h-[620px] items-center">
+    <section className="relative mt-16 flex min-h-[620px] items-center md:mt-24">
       <div className="absolute inset-0">
         {/* Decorative background (heading text carries the meaning) */}
         <Image src={image} alt="" fill sizes="100vw" className="object-cover object-top" />
