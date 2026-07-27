@@ -9,7 +9,7 @@ import { FLEET } from "@/lib/fleet";
  */
 export default function FleetRows() {
   return (
-    <section className="bg-bg-alt py-20 md:py-28">
+    <section className="bg-bg-alt pt-20 pb-16 md:pt-28 md:pb-20">
       <div className="mx-auto max-w-content px-10">
         <h2 className="m-0 mb-[50px] font-display text-[clamp(31px,3.6vw,47px)] font-semibold uppercase tracking-[0.03em] text-gold">
           Meet Our Fleet

@@ -11,14 +11,21 @@ export default function FlappersCta({
   subtitle = "Secure our services for your next event.",
   cta = { label: "Book Now", href: "#" },
   image = "/images/flappers.jpg",
+  /** Top margin above the section. Turn off when a full-bleed band sits directly above. */
+  spacingTop = true,
 }: {
   title?: React.ReactNode;
   subtitle?: React.ReactNode;
   cta?: { label: string; href: string };
   image?: string;
+  spacingTop?: boolean;
 }) {
   return (
-    <section className="relative mt-16 flex min-h-[620px] items-center md:mt-24">
+    <section
+      className={`relative flex min-h-[620px] items-center ${
+        spacingTop ? "mt-16 md:mt-24" : ""
+      }`}
+    >
       <div className="absolute inset-0">
         {/* Decorative background (heading text carries the meaning) */}
         <Image src={image} alt="" fill sizes="100vw" className="object-cover object-top" />

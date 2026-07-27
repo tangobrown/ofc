@@ -78,6 +78,7 @@ export default function CorporatePage() {
       <FleetRows />
 
       <FlappersCta
+        spacingTop={false}
         subtitle={
           <>
             Secure our services for your next event or{" "}

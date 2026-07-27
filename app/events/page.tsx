@@ -107,7 +107,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <FlappersCta />
+      <FlappersCta spacingTop={false} />
 
     </PageShell>
   );
