@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import DecoSeparator from "@/components/DecoSeparator";
+import DubsadoForm from "@/components/DubsadoForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -9,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 /**
- * Contact page — not specified in the handoff, but the nav and several CTAs link
- * here. On-brand placeholder with a simple enquiry form ready to be wired up.
+ * Contact page — the nav and several CTAs link here. Uses the client's embedded
+ * Dubsado enquiry form.
  */
 export default function ContactPage() {
   return (
@@ -29,38 +30,9 @@ export default function ContactPage() {
         </p>
         <DecoSeparator className="my-10" />
 
-        <form className="mx-auto flex max-w-[520px] flex-col gap-5 text-left">
-          <label className="flex flex-col gap-2">
-            <span className="text-[12px] uppercase tracking-nav text-gold">Name</span>
-            <input
-              type="text"
-              name="name"
-              className="border border-[rgba(192,157,108,0.4)] bg-transparent px-4 py-3 text-body outline-none focus:border-gold"
-            />
-          </label>
-          <label className="flex flex-col gap-2">
-            <span className="text-[12px] uppercase tracking-nav text-gold">Email</span>
-            <input
-              type="email"
-              name="email"
-              className="border border-[rgba(192,157,108,0.4)] bg-transparent px-4 py-3 text-body outline-none focus:border-gold"
-            />
-          </label>
-          <label className="flex flex-col gap-2">
-            <span className="text-[12px] uppercase tracking-nav text-gold">Tell us about your event</span>
-            <textarea
-              name="message"
-              rows={5}
-              className="border border-[rgba(192,157,108,0.4)] bg-transparent px-4 py-3 text-body outline-none focus:border-gold"
-            />
-          </label>
-          <button
-            type="submit"
-            className="btn-outline mt-2 self-start border-[rgba(242,236,223,0.75)] px-[28px] py-[13px] text-[14px]"
-          >
-            Send Enquiry <span aria-hidden="true">→</span>
-          </button>
-        </form>
+        <div className="mx-auto max-w-[600px] text-left">
+          <DubsadoForm />
+        </div>
       </section>
     </PageShell>
   );
