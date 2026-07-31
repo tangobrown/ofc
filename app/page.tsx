@@ -1,18 +1,41 @@
 import Image from "next/image";
+import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 import FlappersCta from "@/components/FlappersCta";
-import Placeholder from "@/components/Placeholder";
 import { IMG } from "@/lib/images";
 import { FLEET } from "@/lib/fleet";
 
-const GALLERY = [
-  { label: "Bartender at the oak bar", w: 380 },
-  { label: "Tommy Gun cart, floral", w: 290 },
-  { label: "Close-up of cocktail", w: 250 },
-  { label: "Cocktail making in progress", w: 340 },
-  { label: "Ingredients for cocktails", w: 300 },
+const EVENTS = [
+  {
+    title: "Weddings",
+    href: "/weddings",
+    image: IMG.events.weddingCigars,
+    alt: "Cocktails and cigars at a wedding",
+    text: "Keep the bubbles poppin' and the good times flowin' while you savor the spotlight on your big day.",
+  },
+  {
+    title: "Corporate",
+    href: "/corporate",
+    image: IMG.events.corporate,
+    alt: "Guests at a corporate event",
+    text: "Mix business and pleasure the Old Fashioned way at your next office party or networking do.",
+  },
+  {
+    title: "Birthdays & Anniversaries",
+    href: "/birthdays",
+    image: IMG.events.birthday,
+    alt: "A mobile cocktail bar at a birthday party",
+    text: "Whatever your vintage, celebrate in timeless, roaring-twenties style — no excuse required.",
+  },
+  {
+    title: "All Events",
+    href: "/events",
+    image: IMG.events.smokeyBar,
+    alt: "The mobile cocktail bar in action",
+    text: "Whatever the occasion, we'll bring the theater of a big-city speakeasy straight to you.",
+  },
 ];
 
 export default function HomePage() {
@@ -21,7 +44,7 @@ export default function HomePage() {
       <VideoHero src={IMG.home.smokeVideo} />
 
       {/* Speakeasy */}
-      <section className="mx-auto grid max-w-prose grid-cols-1 gap-10 px-10 pb-[90px] pt-[120px] md:grid-cols-[1fr_1.35fr] md:gap-[60px]">
+      <section className="mx-auto grid max-w-content grid-cols-1 gap-10 px-10 pb-[90px] pt-[120px] md:grid-cols-[1fr_1.35fr] md:gap-[60px]">
         <h2 className="m-0 font-display text-[clamp(31px,3.4vw,45px)] font-semibold uppercase leading-[1.18] tracking-[0.04em] text-gold">
           The Speakeasy
           <br />
@@ -44,7 +67,7 @@ export default function HomePage() {
       </section>
 
       {/* Meet the Fleet */}
-      <section className="mx-auto max-w-prose px-10 pb-20 pt-5">
+      <section className="mx-auto max-w-content px-10 pb-20 pt-5">
         <h2 className="m-0 mb-[46px] font-display text-[clamp(31px,3.8vw,49px)] font-semibold uppercase tracking-[0.03em] text-gold">
           Meet the Fleet…
         </h2>
@@ -72,17 +95,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Gallery strip */}
-      <section className="pb-[90px] pt-5">
-        <div className="flex gap-2 overflow-x-auto px-10 pb-[22px]">
-          {GALLERY.map((g) => (
-            <div key={g.label} className="h-[290px] shrink-0" style={{ width: g.w }}>
-              <Placeholder label={g.label} />
-            </div>
+      {/* What's Your Event? */}
+      <section className="mx-auto max-w-content px-10 pb-24 pt-5">
+        <h2 className="m-0 mb-[46px] font-display text-[clamp(31px,3.8vw,49px)] font-semibold uppercase tracking-[0.03em] text-gold">
+          What&apos;s Your Event?
+        </h2>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {EVENTS.map((e) => (
+            <Link
+              key={e.href}
+              href={e.href}
+              className="group relative block aspect-[16/10] overflow-hidden"
+            >
+              <Image
+                src={e.image}
+                alt={e.alt}
+                fill
+                sizes="(min-width:640px) 50vw, 100vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <h3 className="m-0 font-display text-[clamp(22px,2.4vw,30px)] font-semibold uppercase tracking-[0.03em] text-heading-light transition-colors group-hover:text-gold">
+                  {e.title}
+                </h3>
+                <p className="mt-2 max-w-[46ch] text-[15px] leading-[1.6] text-body">{e.text}</p>
+              </div>
+            </Link>
           ))}
-        </div>
-        <div className="mx-auto max-w-prose px-10">
-          <div className="h-px w-[220px] bg-gradient-to-r from-gold to-transparent" />
         </div>
       </section>
 
