@@ -66,13 +66,14 @@ export default function Nav({ variant = "overlay" }: { variant?: NavVariant }) {
           <NavGroup items={rightLinks} pathname={pathname} />
         </div>
 
-        {/* Right: Instant Quote (desktop) */}
+        {/* Right: Instant Quote (desktop). Fixed to the viewport so it stays visible
+            while scrolling; the flex-1 slot stays to keep the centre group centred. */}
         <div className="hidden flex-1 justify-end lg:flex">
           <a
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-gold px-5 py-[11px] text-[14px] uppercase tracking-nav text-text-hi transition-colors hover:bg-gold hover:text-bg"
+            className="border-2 border-gold bg-bg/70 px-5 py-[11px] text-[14px] uppercase tracking-nav text-text-hi backdrop-blur-sm transition-colors hover:bg-gold hover:text-bg lg:fixed lg:right-[46px] lg:top-[46px] lg:z-50"
           >
             Instant Quote
           </a>
