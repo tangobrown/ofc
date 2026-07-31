@@ -35,7 +35,7 @@ export default function VideoHero({ src }: { src: string }) {
       <div className="absolute inset-0 bg-home-scrim" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-        <h1 className="m-0 font-display text-[clamp(38px,5.8vw,80px)] font-semibold uppercase leading-[1.14] tracking-[0.05em] text-gold [text-shadow:0_2px_18px_rgba(0,0,0,.6)]">
+        <h1 className="m-0 max-w-[700px] font-display text-[clamp(38px,5.8vw,80px)] font-semibold uppercase leading-[1.14] tracking-[0.05em] text-gold [text-shadow:0_2px_18px_rgba(0,0,0,.6)]">
           Smokin&apos; Drinks With a Measure of Style
         </h1>
         <p className="mb-9 mt-[22px] text-[clamp(16px,1.5vw,21px)] tracking-[0.02em] text-[#e9e3d7]">
