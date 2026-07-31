@@ -1,4 +1,5 @@
 import type { Feed, Post } from "@behold/types";
+import { SOCIAL } from "@/lib/nav";
 
 /**
  * "The Latest on Instagram" — the client's 4 most recent posts, fetched from a
@@ -36,7 +37,15 @@ export default async function InstagramFeed() {
   return (
     <section className="px-6 pb-24 pt-20 text-center md:px-10 md:pb-28 md:pt-24">
       <h2 className="m-0 mb-11 font-display text-[clamp(29px,3.3vw,43px)] font-semibold uppercase tracking-[0.05em] text-[#efe9dc]">
-        The Latest on <span className="text-gold">Instagram</span>
+        The Latest on{" "}
+        <a
+          href={SOCIAL.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gold underline-offset-4 hover:underline"
+        >
+          Instagram
+        </a>
       </h2>
 
       {/* Scroll-snap carousel on mobile; 4-up grid from sm upward. No JS/carousel lib. */}
