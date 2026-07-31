@@ -29,13 +29,6 @@ const EVENTS = [
     alt: "A mobile cocktail bar at a birthday party",
     text: "Whatever your vintage, celebrate in timeless, roaring-twenties style — no excuse required.",
   },
-  {
-    title: "All Events",
-    href: "/events",
-    image: IMG.events.smokeyBar,
-    alt: "The mobile cocktail bar in action",
-    text: "Whatever the occasion, we'll bring the theater of a big-city speakeasy straight to you.",
-  },
 ];
 
 export default function HomePage() {
@@ -100,12 +93,12 @@ export default function HomePage() {
         <h2 className="m-0 mb-[46px] font-display text-[clamp(31px,3.8vw,49px)] font-semibold uppercase tracking-[0.03em] text-gold">
           What&apos;s Your Event?
         </h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {EVENTS.map((e) => (
             <Link
               key={e.href}
               href={e.href}
-              className="group relative block aspect-[16/10] overflow-hidden"
+              className="group relative block aspect-[4/3] overflow-hidden"
             >
               <Image
                 src={e.image}
