@@ -23,7 +23,7 @@ export default function BlogIndexPage() {
         cta={{ label: "Check Availability", href: BOOKING_URL }}
       />
 
-      <section className="mx-auto max-w-blog-index px-6 py-16">
+      <section className="mx-auto max-w-blog-index px-5 md:px-6 py-16">
         <div className="flex flex-col gap-16">
           {POSTS.map((post) => (
             <Link

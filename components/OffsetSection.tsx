@@ -49,7 +49,7 @@ export default function OffsetSection({
 
   return (
     <section
-      className={`mx-auto grid max-w-content grid-cols-1 items-center gap-12 px-10 py-16 md:grid-cols-2 md:gap-16 ${className}`}
+      className={`mx-auto grid max-w-content grid-cols-1 items-center gap-12 px-5 md:px-10 py-16 md:grid-cols-2 md:gap-16 ${className}`}
     >
       {image}
       {text}

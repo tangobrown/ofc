@@ -1,6 +1,7 @@
 import Nav from "./Nav";
 import Footer from "./Footer";
 import InstagramFeed from "./InstagramFeed";
+import QuoteStrip from "./QuoteStrip";
 
 /**
  * Standard page wrapper. `navVariant="overlay"` (default) floats a transparent
@@ -19,6 +20,7 @@ export default function PageShell({
       <main>{children}</main>
       <InstagramFeed />
       <Footer />
+      <QuoteStrip />
     </div>
   );
 }

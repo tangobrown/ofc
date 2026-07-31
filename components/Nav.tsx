@@ -191,7 +191,7 @@ function MobileDrawer({
                   <Link
                     href={item.href}
                     onClick={onClose}
-                    className={`block py-3 text-[13px] uppercase tracking-nav ${
+                    className={`block py-[14px] text-[16px] uppercase tracking-nav ${
                       active ? "text-gold" : "text-text-hi"
                     }`}
                   >
@@ -207,7 +207,7 @@ function MobileDrawer({
                   type="button"
                   onClick={() => setOpenGroup(expanded ? null : item.label)}
                   aria-expanded={expanded}
-                  className={`flex w-full items-center justify-between py-3 text-[13px] uppercase tracking-nav ${
+                  className={`flex w-full items-center justify-between py-[14px] text-[16px] uppercase tracking-nav ${
                     active ? "text-gold" : "text-text-hi"
                   }`}
                 >
@@ -221,7 +221,7 @@ function MobileDrawer({
                         <Link
                           href={c.href}
                           onClick={onClose}
-                          className={`block py-2 text-[12px] uppercase tracking-nav ${
+                          className={`block py-[10px] text-[14px] uppercase tracking-nav ${
                             pathname === c.href ? "text-gold" : "text-body-dim"
                           }`}
                         >

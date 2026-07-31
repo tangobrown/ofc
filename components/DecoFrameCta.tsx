@@ -14,8 +14,8 @@ export default function DecoFrameCta({
   cta: { label: string; href: string };
 }) {
   return (
-    <section className="px-10 py-[110px] text-center">
-      <div className="relative mx-auto max-w-[560px] px-10 py-[70px]">
+    <section className="px-5 py-[110px] md:px-10 text-center">
+      <div className="relative mx-auto max-w-[560px] px-6 py-[70px] md:px-10">
         <div className="absolute inset-0 border border-[rgba(217,196,166,0.5)]" aria-hidden="true" />
         <div className="absolute -top-px left-[38%] right-[38%] h-[2px] bg-bg" aria-hidden="true" />
         <div className="absolute -bottom-px left-[38%] right-[38%] h-[2px] bg-bg" aria-hidden="true" />

@@ -23,7 +23,7 @@ export default function HowItWorksPage() {
       />
 
       {/* Steps */}
-      <section className="mx-auto flex max-w-content flex-col gap-[110px] px-10 pb-[60px] pt-[100px]">
+      <section className="mx-auto flex max-w-content flex-col gap-[110px] px-5 md:px-10 pb-[60px] pt-[100px]">
         {/* Step One */}
         <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-[auto_1fr] md:gap-[50px]">
           <div className="md:w-[230px]">

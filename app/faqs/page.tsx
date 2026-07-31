@@ -191,7 +191,7 @@ export default function FaqsPage() {
         cta={{ label: "Check Availability", href: BOOKING_URL }}
       />
 
-      <section className="mx-auto max-w-faq px-6 py-20" id="content">
+      <section className="mx-auto max-w-faq px-5 md:px-6 py-20" id="content">
         <FaqAccordion items={FAQ_ITEMS} />
       </section>
 

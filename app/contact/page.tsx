@@ -23,7 +23,7 @@ export default function ContactPage() {
         showArrow
       />
 
-      <section id="content" className="mx-auto max-w-[720px] px-6 py-20 text-center">
+      <section id="content" className="mx-auto max-w-[720px] px-5 md:px-6 py-20 text-center">
         <p className="mx-auto mb-4 max-w-[560px] text-[18px] leading-[1.8] text-body">
           Ready to bring the razzle-dazzle to your event? Drop us a line with your date, location and
           the kind of party you have in mind, and we&apos;ll be in touch with an instant quote.

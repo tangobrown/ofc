@@ -33,7 +33,7 @@ export default function Hero({
 }: HeroProps) {
   const heightCls = height === "short" ? "h-[56vh] min-h-[440px]" : "h-[72vh] min-h-[580px]";
   return (
-    <section id="content" className={`relative w-full overflow-hidden ${heightCls}`}>
+    <section id="content" data-hero className={`relative w-full overflow-hidden ${heightCls}`}>
       {image ? (
         <Image src={image} alt={imageAlt} fill priority sizes="100vw" className="object-cover" />
       ) : (

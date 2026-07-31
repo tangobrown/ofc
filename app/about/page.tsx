@@ -23,7 +23,7 @@ export default function AboutPage() {
       />
 
       {/* What Do We Do? — heading left / text right, no photo */}
-      <section className="mx-auto grid max-w-content grid-cols-1 items-start gap-16 px-10 py-16 md:grid-cols-[1fr_1.35fr]">
+      <section className="mx-auto grid max-w-content grid-cols-1 items-start gap-16 px-5 md:px-10 py-16 md:grid-cols-[1fr_1.35fr]">
         <h2 className="m-0 font-display text-[clamp(31px,3.4vw,45px)] font-semibold uppercase leading-[1.18] tracking-[0.04em] text-gold">
           What Do We Do?
         </h2>

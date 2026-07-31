@@ -31,7 +31,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   return (
     <PageShell navVariant="solid">
-      <article className="mx-auto max-w-article px-6 pt-16 pb-10">
+      <article className="mx-auto max-w-article px-5 md:px-6 pt-16 pb-10">
         <p className="eyebrow mb-4 text-center text-[13px] uppercase text-gold">{post.category}</p>
         <h1 className="mb-5 text-center font-display text-[clamp(34px,4.5vw,54px)] font-semibold uppercase tracking-[0.02em] leading-[1.18] text-cream">
           {post.title}
@@ -58,7 +58,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         {post.body}
       </article>
 
-      <nav className="mx-auto flex max-w-article justify-between gap-6 border-t border-[rgba(217,196,166,0.18)] px-6 pt-8 pb-16">
+      <nav className="mx-auto flex max-w-article justify-between gap-6 border-t border-[rgba(217,196,166,0.18)] px-5 md:px-6 pt-8 pb-16">
         {prev ? (
           <Link href={`/blog/${prev.slug}`} className="text-gold hover:text-cream">
             ← {prev.title}

@@ -73,7 +73,7 @@ export default function EventsPage() {
       </OffsetSection>
 
       {/* Meet Our Fleet — tonal band */}
-      <section className="bg-bg-alt px-10 pb-[90px] pt-20">
+      <section className="bg-bg-alt px-5 md:px-10 pb-[90px] pt-20">
         <h2 className="m-0 mb-[50px] text-center font-display text-[clamp(31px,3.6vw,47px)] font-semibold uppercase tracking-[0.04em] text-gold">
           Meet Our Fleet
         </h2>

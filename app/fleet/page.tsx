@@ -81,7 +81,7 @@ export default function FleetPage() {
         <section
           key={p.id}
           id={p.id}
-          className="mx-auto grid max-w-content scroll-mt-24 grid-cols-1 items-start gap-12 px-10 py-16 md:grid-cols-[1fr_1.05fr] md:gap-16"
+          className="mx-auto grid max-w-content scroll-mt-24 grid-cols-1 items-start gap-12 px-5 md:px-10 py-16 md:grid-cols-[1fr_1.05fr] md:gap-16"
         >
           <div className="flex flex-col gap-[26px]">
             {p.photos.map((photo) => (
@@ -120,7 +120,7 @@ export default function FleetPage() {
       ))}
 
       {/* CTA */}
-      <section className="px-10 pb-[100px] pt-[70px] text-center">
+      <section className="px-5 md:px-10 pb-[100px] pt-[70px] text-center">
         <h2 className="m-0 mb-4 font-display text-[clamp(27px,2.9vw,38px)] font-semibold uppercase tracking-[0.03em] text-heading-light">
           Book the &apos;Old Fashioned&apos; Now
         </h2>

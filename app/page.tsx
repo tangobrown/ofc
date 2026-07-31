@@ -37,7 +37,7 @@ export default function HomePage() {
       <VideoHero src={IMG.home.smokeVideo} />
 
       {/* Speakeasy */}
-      <section className="mx-auto grid max-w-content grid-cols-1 gap-10 px-10 pb-[90px] pt-[120px] md:grid-cols-[1fr_1.35fr] md:gap-[60px]">
+      <section className="mx-auto grid max-w-content grid-cols-1 gap-10 px-5 md:px-10 pb-[90px] pt-[120px] md:grid-cols-[1fr_1.35fr] md:gap-[60px]">
         <h2 className="m-0 font-display text-[clamp(31px,3.4vw,45px)] font-semibold uppercase leading-[1.18] tracking-[0.04em] text-gold">
           The Speakeasy
           <br />
@@ -60,7 +60,7 @@ export default function HomePage() {
       </section>
 
       {/* Meet the Fleet */}
-      <section className="mx-auto max-w-content px-10 pb-20 pt-5">
+      <section className="mx-auto max-w-content px-5 md:px-10 pb-20 pt-5">
         <h2 className="m-0 mb-[46px] font-display text-[clamp(31px,3.8vw,49px)] font-semibold uppercase tracking-[0.03em] text-gold">
           Meet the Fleet…
         </h2>
@@ -89,7 +89,7 @@ export default function HomePage() {
       </section>
 
       {/* What's Your Event? */}
-      <section className="mx-auto max-w-content px-10 pb-24 pt-5">
+      <section className="mx-auto max-w-content px-5 md:px-10 pb-24 pt-5">
         <h2 className="m-0 mb-[46px] font-display text-[clamp(31px,3.8vw,49px)] font-semibold uppercase tracking-[0.03em] text-gold">
           What&apos;s Your Event?
         </h2>

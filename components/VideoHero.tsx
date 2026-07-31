@@ -21,7 +21,7 @@ export default function VideoHero({ src }: { src: string }) {
   }, []);
 
   return (
-    <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
+    <section data-hero className="relative h-screen min-h-[640px] w-full overflow-hidden">
       <video
         ref={videoRef}
         autoPlay
