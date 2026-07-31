@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowIcon } from "./icons";
 
 type ButtonProps = {
   href: string;
@@ -32,7 +33,7 @@ export default function Button({
   const content = (
     <>
       {children}
-      <span aria-hidden="true">→</span>
+      <ArrowIcon className="h-4 w-4 shrink-0" />
     </>
   );
 
