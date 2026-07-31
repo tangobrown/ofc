@@ -90,11 +90,11 @@ export default function Nav({ variant = "overlay" }: { variant?: NavVariant }) {
             aria-label="Open menu"
             aria-expanded={drawerOpen}
             onClick={() => setDrawerOpen(true)}
-            className="flex h-12 w-12 flex-col items-center justify-center gap-[6px] text-gold"
+            className="flex h-14 w-14 flex-col items-start justify-center gap-[9px] text-gold"
           >
-            <span className="h-0.5 w-8 bg-current" />
-            <span className="h-0.5 w-6 bg-current" />
-            <span className="h-0.5 w-8 bg-current" />
+            <span className="h-[3px] w-10 bg-current" />
+            <span className="h-[3px] w-8 bg-current" />
+            <span className="h-[3px] w-10 bg-current" />
           </button>
         </div>
       </nav>
