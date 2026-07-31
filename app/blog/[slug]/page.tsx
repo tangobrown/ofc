@@ -5,9 +5,19 @@ import { notFound } from "next/navigation";
 import PageShell from "@/components/PageShell";
 import Placeholder from "@/components/Placeholder";
 import { POSTS } from "@/lib/blog";
+import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export function generateStaticParams() {
   return POSTS.map((post) => ({ slug: post.slug }));
+}
+
+function isoDate(s: string): string | undefined {
+  const d = new Date(s);
+  return Number.isNaN(d.getTime()) ? undefined : d.toISOString();
+}
+
+function trim(text: string, max = 165): string {
+  return text.length > max ? `${text.slice(0, max - 1).trimEnd()}…` : text;
 }
 
 export async function generateMetadata({
@@ -17,7 +27,29 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = POSTS.find((p) => p.slug === slug);
-  return { title: post ? post.title : "Blog" };
+  if (!post) return { title: "Blog" };
+
+  const description = trim(post.excerpt);
+  const path = `/blog/${post.slug}`;
+  const image = post.featureImage ?? DEFAULT_OG_IMAGE;
+  const ogTitle = `${post.title} · ${SITE_NAME}`;
+
+  return {
+    title: post.title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "article",
+      title: ogTitle,
+      description,
+      url: path,
+      images: [{ url: image, alt: post.title }],
+      publishedTime: isoDate(post.date),
+      authors: [post.author],
+      section: post.category,
+    },
+    twitter: { title: ogTitle, description, images: [image] },
+  };
 }
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
@@ -28,6 +60,19 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const post = POSTS[index];
   const prev = index > 0 ? POSTS[index - 1] : undefined;
   const next = index < POSTS.length - 1 ? POSTS[index + 1] : undefined;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    ...(post.featureImage ? { image: [post.featureImage] } : {}),
+    datePublished: isoDate(post.date),
+    author: { "@type": "Person", name: post.author },
+    publisher: { "@type": "Organization", name: SITE_NAME },
+    articleSection: post.category,
+    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
+  };
 
   return (
     <PageShell navVariant="solid">
@@ -74,6 +119,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <span />
         )}
       </nav>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </PageShell>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import EventCarousel from "@/components/EventCarousel";
@@ -9,11 +10,12 @@ import FlappersCta from "@/components/FlappersCta";
 import { IMG } from "@/lib/images";
 import { BOOKING_URL } from "@/lib/nav";
 
-export const metadata: Metadata = {
-  title: "Birthdays & Anniversaries",
+export const metadata: Metadata = pageMeta({
+  title: "Birthday & Anniversary Cocktail Bar Hire",
   description:
-    "Make your party a classic with New York's finest mobile cocktail bar for birthdays and anniversaries.",
-};
+    "Celebrate your birthday or anniversary in roaring-twenties style with a vintage mobile cocktail bar and expert bartenders, hired across New York.",
+  path: "/birthdays",
+});
 
 
 export default function BirthdaysPage() {

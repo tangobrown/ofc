@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import EventCarousel from "@/components/EventCarousel";
@@ -9,11 +10,12 @@ import FlappersCta from "@/components/FlappersCta";
 import { IMG } from "@/lib/images";
 import { BOOKING_URL } from "@/lib/nav";
 
-export const metadata: Metadata = {
-  title: "Weddings",
+export const metadata: Metadata = pageMeta({
+  title: "Wedding Cocktail Bar Hire",
   description:
-    "Book New York's best mobile cocktail bar and wow your wedding guests with vintage speakeasy style.",
-};
+    "Wow your wedding guests with a vintage mobile cocktail bar. The Old Fashioned Cocktail Co. serves handcrafted cocktails in prohibition-era style across New York.",
+  path: "/weddings",
+});
 
 
 export default function WeddingsPage() {

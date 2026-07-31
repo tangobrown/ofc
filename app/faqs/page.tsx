@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import FaqAccordion from "@/components/FaqAccordion";
 import DecoFrameCta from "@/components/DecoFrameCta";
 import { BOOKING_URL } from "@/lib/nav";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "FAQs",
   description:
-    "Answers to common questions about booking The Old Fashioned Cocktail Co. mobile cocktail bars.",
-};
+    "Answers to common questions about booking our mobile cocktail bars: coverage area, setup time, space and power needs, insurance, alcohol and permits.",
+  path: "/faqs",
+});
 
 const FAQ_ITEMS = [
   {

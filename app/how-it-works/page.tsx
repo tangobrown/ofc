@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import FlappersCta from "@/components/FlappersCta";
 import { BOOKING_URL } from "@/lib/nav";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "How It Works",
   description:
-    "Build your party package in seconds — get a quote, customize, confirm staffing and submit your proposal.",
-};
+    "Build your party package in seconds: get an instant quote, customize your cocktails and staffing, then submit your proposal. Mobile cocktail bar hire made easy.",
+  path: "/how-it-works",
+});
 
 export default function HowItWorksPage() {
   return (

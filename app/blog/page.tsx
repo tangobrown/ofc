@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
@@ -7,10 +8,12 @@ import { BOOKING_URL } from "@/lib/nav";
 import Placeholder from "@/components/Placeholder";
 import { POSTS } from "@/lib/blog";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description: "Tips 'n Tricks — shake up your bartending skills with The Old Fashioned Cocktail Co.",
-};
+export const metadata: Metadata = pageMeta({
+  title: "Blog — Tips 'n Tricks",
+  description:
+    "Shake up your bartending skills with cocktail tips, whiskey and mezcal guides, clear-ice how-tos and party ideas from The Old Fashioned Cocktail Co.",
+  path: "/blog",
+});
 
 export default function BlogIndexPage() {
   return (

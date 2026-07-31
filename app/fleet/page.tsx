@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
@@ -6,10 +7,12 @@ import Button from "@/components/Button";
 import { IMG } from "@/lib/images";
 import { BOOKING_URL } from "@/lib/nav";
 
-export const metadata: Metadata = {
-  title: "Our Fleet",
-  description: "Meet our fleet of vintage mobile cocktail bars.",
-};
+export const metadata: Metadata = pageMeta({
+  title: "Our Fleet of Mobile Cocktail Bars",
+  description:
+    "Meet our vintage mobile cocktail bars: The Old Fashioned oak bar and Little Tommy Gun, a converted Piaggio Ape tap truck. Available for hire across New York.",
+  path: "/fleet",
+});
 
 type Profile = {
   id: string;

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
@@ -8,11 +9,12 @@ import FlappersCta from "@/components/FlappersCta";
 import Button from "@/components/Button";
 import { IMG } from "@/lib/images";
 
-export const metadata: Metadata = {
-  title: "Events",
+export const metadata: Metadata = pageMeta({
+  title: "Mobile Cocktail Bar for Events",
   description:
-    "Mobile cocktail bar hire for weddings, birthdays, anniversaries and corporate events across New York.",
-};
+    "Weddings, birthdays, anniversaries or corporate dos — we bring a vintage mobile cocktail bar and professional bartenders to events across New York.",
+  path: "/events",
+});
 
 export default function EventsPage() {
   return (

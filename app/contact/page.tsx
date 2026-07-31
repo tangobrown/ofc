@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import DecoSeparator from "@/components/DecoSeparator";
 import DubsadoForm from "@/components/DubsadoForm";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Contact",
-  description: "Get in touch with The Old Fashioned Cocktail Co. for mobile cocktail bar hire in New York.",
-};
+  description:
+    "Get in touch with The Old Fashioned Cocktail Co. for mobile cocktail bar hire in New York. Request an instant quote for your wedding, party or corporate event.",
+  path: "/contact",
+});
 
 /**
  * Contact page — the nav and several CTAs link here. Uses the client's embedded

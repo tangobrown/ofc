@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import EventCarousel from "@/components/EventCarousel";
@@ -9,11 +10,12 @@ import FlappersCta from "@/components/FlappersCta";
 import { IMG } from "@/lib/images";
 import { BOOKING_URL } from "@/lib/nav";
 
-export const metadata: Metadata = {
-  title: "Corporate Events",
+export const metadata: Metadata = pageMeta({
+  title: "Corporate Event Cocktail Bar Hire",
   description:
-    "Book New York's finest mobile cocktail bar and make yours a classic at your next corporate event.",
-};
+    "Mix business and pleasure with a mobile cocktail bar for your office party, product launch or networking event. Pro bartenders and signature cocktails across New York.",
+  path: "/corporate",
+});
 
 
 export default function CorporatePage() {

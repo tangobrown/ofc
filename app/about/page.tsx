@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import { BOOKING_URL } from "@/lib/nav";
@@ -6,10 +7,12 @@ import OffsetSection from "@/components/OffsetSection";
 import FlappersCta from "@/components/FlappersCta";
 import { IMG } from "@/lib/images";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About Us",
-  description: "Hard Liquor. Easy Parties. The story behind The Old Fashioned Cocktail Co.",
-};
+  description:
+    "Hard liquor, easy parties. The story behind The Old Fashioned Cocktail Co., New York's vintage mobile cocktail bar hire company, and founder Dwayne.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
