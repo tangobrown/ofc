@@ -98,7 +98,7 @@ export default function HomePage() {
             <Link
               key={e.href}
               href={e.href}
-              className="group relative block aspect-[4/3] overflow-hidden"
+              className="group relative block aspect-[3/4] overflow-hidden"
             >
               <Image
                 src={e.image}
