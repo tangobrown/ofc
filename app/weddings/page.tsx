@@ -22,13 +22,7 @@ export default function WeddingsPage() {
       <Hero
         image="/images/weddings-hero.jpg"
         imageAlt="Cocktail being served at a wedding"
-        title={
-          <>
-            Mobile Cocktail Bar for
-            <br />
-            Weddings
-          </>
-        }
+        title="Mobile Cocktail Bar for Weddings"
         subtitle="Book New York's best mobile cocktail bar and wow your wedding guests"
         subtitleItalic={false}
         cta={{ label: "Check Availability", href: BOOKING_URL }}

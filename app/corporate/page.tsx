@@ -22,13 +22,7 @@ export default function CorporatePage() {
       <Hero
         image="/images/corporate-hero.jpg"
         imageAlt="A cocktail being served at an event"
-        title={
-          <>
-            Mobile Cocktail Bar for
-            <br />
-            Corporate Events
-          </>
-        }
+        title="Mobile Cocktail Bar for Corporate Events"
         subtitle="Book New York's finest mobile cocktail bar and make yours a classic!"
         subtitleItalic={false}
         cta={{ label: "Check Availability", href: BOOKING_URL }}

@@ -22,13 +22,7 @@ export default function BirthdaysPage() {
       <Hero
         image="/images/birthdays-hero.jpg"
         imageAlt="A cocktail being served at an event"
-        title={
-          <>
-            Make Your Party a
-            <br />
-            Classic
-          </>
-        }
+        title="Make Your Party a Classic"
         subtitle="With New York's Finest Mobile Cocktail Bar"
         subtitleItalic={false}
         cta={{ label: "Check Availability", href: BOOKING_URL }}
