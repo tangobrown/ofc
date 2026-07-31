@@ -35,7 +35,7 @@ export default async function InstagramFeed() {
   if (!posts) return null;
 
   return (
-    <section className="px-[30px] pb-24 pt-20 text-center md:pb-28 md:pt-24">
+    <section className="border-t border-[rgba(217,196,166,0.18)] px-[30px] pb-12 pt-20 text-center md:pb-16 md:pt-24">
       <h2 className="m-0 mb-11 font-display text-[clamp(29px,3.3vw,43px)] font-semibold uppercase tracking-[0.05em] text-[#efe9dc]">
         The Latest on{" "}
         <a
@@ -54,6 +54,7 @@ export default async function InstagramFeed() {
           const { small, medium } = post.sizes;
           // prunedCaption has hashtags stripped; prefer it wherever text is shown.
           const alt = post.altText ?? post.prunedCaption ?? "";
+          const caption = post.prunedCaption ?? post.caption ?? "";
           const bg = post.colorPalette?.muted ? `rgb(${post.colorPalette.muted})` : "#1c1b19";
 
           return (
@@ -66,7 +67,7 @@ export default async function InstagramFeed() {
                 className="group block"
               >
                 <div
-                  className="aspect-square w-full overflow-hidden"
+                  className="relative aspect-square w-full overflow-hidden"
                   style={{ backgroundColor: bg }}
                 >
                   {/* Plain img: Behold already serves optimized, correctly-sized URLs. */}
@@ -81,6 +82,13 @@ export default async function InstagramFeed() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                  {caption && (
+                    <div className="absolute inset-0 flex items-end bg-black/55 p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <p className="line-clamp-4 text-left text-[13px] leading-snug text-white">
+                        {caption}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </a>
             </li>
