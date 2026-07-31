@@ -17,7 +17,8 @@ export default function ContactPage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="Bartender mixing a cocktail in low light"
+        image="/images/cocktail-bar-outside.jpg"
+        imageAlt="The mobile cocktail bar set up outdoors"
         title="Get In Touch"
         subtitle="Let's make yours a classic."
         showArrow

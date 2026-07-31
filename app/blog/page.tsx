@@ -16,7 +16,8 @@ export default function BlogIndexPage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="Cigars & dried citrus flatlay"
+        image="/images/cocktail-bar-outside.jpg"
+        imageAlt="The mobile cocktail bar set up outdoors"
         title="Tips 'n Tricks"
         subtitle="Shake up your bartending skills."
         height="short"

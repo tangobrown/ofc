@@ -185,7 +185,8 @@ export default function FaqsPage() {
   return (
     <PageShell>
       <Hero
-        imageAlt="1920s flappers with cocktails"
+        image="/images/cocktail-bar-outside.jpg"
+        imageAlt="The mobile cocktail bar set up outdoors"
         title="Frequently Asked Questions"
         subtitle="Lookin' for answers? You've come to the right place…"
         cta={{ label: "Check Availability", href: BOOKING_URL }}
