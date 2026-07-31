@@ -38,3 +38,6 @@ export const SOCIAL = {
   facebook: "https://www.facebook.com/theoldfashionedcocktailco/",
   instagram: "https://www.instagram.com/theoldfashionedcocktailco/",
 } as const;
+
+// Booking / quote destination (EventCinch marketplace). Opens in a new tab.
+export const BOOKING_URL = "https://eventcinch.com/marketplace/1067";

@@ -28,6 +28,7 @@ export default function Button({
   const borderCls =
     tone === "cream" ? "border-[rgba(242,236,223,0.75)]" : "border-[rgba(217,196,166,0.85)]";
 
+  const isExternal = /^https?:\/\//.test(href);
   const isInternal = href.startsWith("/") && !href.startsWith("//");
   const cls = `btn-outline ${sizeCls} ${borderCls} ${className}`;
   const content = (
@@ -45,7 +46,11 @@ export default function Button({
     );
   }
   return (
-    <a href={href} className={cls}>
+    <a
+      href={href}
+      className={cls}
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
       {content}
     </a>
   );

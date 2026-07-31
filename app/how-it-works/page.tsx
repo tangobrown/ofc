@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import FlappersCta from "@/components/FlappersCta";
+import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "How It Works",
@@ -38,7 +39,12 @@ export default function HowItWorksPage() {
             <div className="space-y-4 text-[16.5px] leading-[1.75] text-body">
               <p>They say you can&apos;t put a price on a good time – but for us, it&apos;s a cinch!</p>
               <p>
-                <a href="#" className="text-gold hover:text-cream">
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:text-cream"
+                >
                   Click here
                 </a>{" "}
                 to swing by our bespoke, interactive package building platform. Viewing on a laptop or
@@ -51,7 +57,7 @@ export default function HowItWorksPage() {
               </p>
               <p>
                 Not sure which package is best for you? Jump on over to our{" "}
-                <a href="#" className="text-gold hover:text-cream">
+                <a href="/faqs" className="text-gold hover:text-cream">
                   FAQ page
                 </a>{" "}
                 and it should enlighten ya.

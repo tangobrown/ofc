@@ -20,6 +20,20 @@ export function ArrowIcon({ className = "h-4 w-4" }: { className?: string }) {
   );
 }
 
+export function ChevronDownIcon({ className = "h-3 w-3" }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z" />
+    </svg>
+  );
+}
+
 export function InstagramIcon({ size = 16 }: { size?: number }) {
   return (
     <svg

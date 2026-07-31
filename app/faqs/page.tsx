@@ -3,6 +3,7 @@ import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import FaqAccordion from "@/components/FaqAccordion";
 import DecoFrameCta from "@/components/DecoFrameCta";
+import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "FAQs",
@@ -16,7 +17,7 @@ const FAQ_ITEMS = [
     a: (
       <p className="mb-4">
         How many have you got? We offer a range of packages to suit any sized event.{" "}
-        <a href="#">Check them out here</a>.
+        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Check them out here</a>.
       </p>
     ),
   },
@@ -122,7 +123,7 @@ const FAQ_ITEMS = [
           <li>Next, find the perfect event package.</li>
           <li>Last, submit a proposal and standby for an OFCC representative to reach out to you.</li>
         </ul>
-        <a href="#">Get a Quote Now →</a>
+        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Get a Quote Now →</a>
       </>
     ),
   },

@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { NAV_ITEMS, LOGO_SRC, SOCIAL, type NavItem } from "@/lib/nav";
-import { FacebookIcon, InstagramIcon } from "./icons";
+import { NAV_ITEMS, LOGO_SRC, SOCIAL, BOOKING_URL, type NavItem } from "@/lib/nav";
+import { FacebookIcon, InstagramIcon, ChevronDownIcon } from "./icons";
 
 type NavVariant = "overlay" | "solid";
 
@@ -69,8 +69,10 @@ export default function Nav({ variant = "overlay" }: { variant?: NavVariant }) {
         {/* Right: Instant Quote (desktop) */}
         <div className="hidden flex-1 justify-end lg:flex">
           <a
-            href="#"
-            className="border border-gold px-5 py-[11px] text-[14px] uppercase tracking-nav text-text-hi transition-colors hover:bg-gold hover:text-bg"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-gold px-5 py-[11px] text-[14px] uppercase tracking-nav text-text-hi transition-colors hover:bg-gold hover:text-bg"
           >
             Instant Quote
           </a>
@@ -114,7 +116,7 @@ function NavGroup({ items, pathname }: { items: NavItem[]; pathname: string }) {
     <>
       {items.map((item) => {
         const active = isActive(item, pathname);
-        const base = `uppercase tracking-nav text-[12.5px] transition-colors hover:text-cream ${
+        const base = `uppercase tracking-nav text-[14px] transition-colors hover:text-cream ${
           active ? "text-gold" : "text-text-hi"
         }`;
         if (!item.children) {
@@ -125,12 +127,10 @@ function NavGroup({ items, pathname }: { items: NavItem[]; pathname: string }) {
           );
         }
         return (
-          <div key={item.label} className="group relative">
+          <div key={item.label} className="group relative flex items-center">
             <Link href={item.href} className={`${base} inline-flex items-center gap-1`}>
               {item.label}
-              <span aria-hidden="true" className="text-[9px]">
-                ▾
-              </span>
+              <ChevronDownIcon className="h-3 w-3" />
             </Link>
             {/* Dropdown */}
             <div className="invisible absolute left-1/2 top-full z-40 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
@@ -235,8 +235,10 @@ function MobileDrawer({
           })}
         </ul>
         <a
-          href="#"
-          className="mt-8 inline-flex border border-gold px-5 py-3 text-[14px] uppercase tracking-nav text-text-hi transition-colors hover:bg-gold hover:text-bg"
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-flex border-2 border-gold px-5 py-3 text-[14px] uppercase tracking-nav text-text-hi transition-colors hover:bg-gold hover:text-bg"
         >
           Instant Quote
         </a>

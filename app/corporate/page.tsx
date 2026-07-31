@@ -7,6 +7,7 @@ import OffsetSection from "@/components/OffsetSection";
 import FleetRows from "@/components/FleetRows";
 import FlappersCta from "@/components/FlappersCta";
 import { IMG } from "@/lib/images";
+import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Corporate Events",
@@ -30,7 +31,7 @@ export default function CorporatePage() {
         }
         subtitle="Book New York's finest mobile cocktail bar and make yours a classic!"
         subtitleItalic={false}
-        cta={{ label: "Check Availability", href: "#" }}
+        cta={{ label: "Check Availability", href: BOOKING_URL }}
       />
 
       <EventCarousel items={EVENT_CAROUSEL} />

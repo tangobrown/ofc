@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
+import { BOOKING_URL } from "@/lib/nav";
 
 /**
  * "Make Yours a Classic" full-bleed flappers CTA: background photo, left-to-right
@@ -9,7 +10,7 @@ import Button from "./Button";
 export default function FlappersCta({
   title = "Make Yours a Classic",
   subtitle = "Secure our services for your next event.",
-  cta = { label: "Book Now", href: "#" },
+  cta = { label: "Book Now", href: BOOKING_URL },
   image = "/images/flappers.jpg",
   /** Top margin above the section. Turn off when a full-bleed band sits directly above. */
   spacingTop = true,

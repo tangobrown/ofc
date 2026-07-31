@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Button from "./Button";
+import { BOOKING_URL } from "@/lib/nav";
 
 /**
  * Home-only full-screen video hero. The smoke .mp4 has audio, so we force-mute
@@ -42,7 +43,7 @@ export default function VideoHero({ src }: { src: string }) {
         <p className="mb-9 mt-[22px] text-[clamp(16px,1.5vw,21px)] tracking-[0.02em] text-[#e9e3d7]">
           Mobile Cocktail Bar Hire in New York
         </p>
-        <Button href="#" tone="cream">
+        <Button href={BOOKING_URL} tone="cream">
           Book Now
         </Button>
       </div>

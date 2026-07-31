@@ -4,6 +4,7 @@ import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import Button from "@/components/Button";
 import { IMG } from "@/lib/images";
+import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Our Fleet",
@@ -101,7 +102,7 @@ export default function FleetPage() {
               {p.heading}
             </h2>
             <div className="rule-gold mb-[22px]" />
-            <p className="mb-5 font-display text-[14px] font-semibold uppercase tracking-[0.04em] text-text-hi">
+            <p className="mb-5 font-display text-[18px] font-semibold uppercase tracking-[0.04em] text-text-hi">
               {p.capacity}
             </p>
             <div className="mb-6 text-[16.5px] leading-[1.75] text-body">{p.description}</div>
@@ -111,7 +112,7 @@ export default function FleetPage() {
             <p className="mb-[30px] text-[13px] uppercase tracking-[0.05em] text-gold">
               {p.attribution}
             </p>
-            <Button href="#" size="sm">
+            <Button href={BOOKING_URL} size="sm">
               Book Now
             </Button>
           </div>
@@ -130,7 +131,7 @@ export default function FleetPage() {
           </a>
           .
         </p>
-        <Button href="#" tone="cream">
+        <Button href={BOOKING_URL} tone="cream">
           Check Availability
         </Button>
       </section>
