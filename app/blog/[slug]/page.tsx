@@ -58,7 +58,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         {post.body}
       </article>
 
-      <nav className="mx-auto flex max-w-article justify-between gap-6 border-t border-[rgba(192,157,108,0.18)] px-6 pt-8 pb-16">
+      <nav className="mx-auto flex max-w-article justify-between gap-6 border-t border-[rgba(217,196,166,0.18)] px-6 pt-8 pb-16">
         {prev ? (
           <Link href={`/blog/${prev.slug}`} className="text-gold hover:text-cream">
             ← {prev.title}

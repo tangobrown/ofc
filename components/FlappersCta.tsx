@@ -31,7 +31,7 @@ export default function FlappersCta({
         <Image src={image} alt="" fill sizes="100vw" className="object-cover object-top" />
       </div>
       <div className="pointer-events-none absolute inset-0 bg-flappers-scrim" />
-      <div className="relative z-[5] ml-[min(9vw,150px)] max-w-[340px] border border-[rgba(192,157,108,0.6)] bg-black/40 px-10 py-11 backdrop-blur-sm">
+      <div className="relative z-[5] ml-[min(9vw,150px)] max-w-[340px] border border-[rgba(217,196,166,0.6)] bg-black/40 px-10 py-11 backdrop-blur-sm">
         <h2 className="m-0 mb-4 font-display text-[34px] font-semibold uppercase leading-[1.2] tracking-[0.04em] text-gold">
           {title}
         </h2>

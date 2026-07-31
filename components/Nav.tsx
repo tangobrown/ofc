@@ -22,7 +22,7 @@ export default function Nav({ variant = "overlay" }: { variant?: NavVariant }) {
   const wrapperCls =
     variant === "overlay"
       ? "absolute top-0 left-0 right-0 z-30"
-      : "relative z-30 bg-nav-bg border-b border-[rgba(192,157,108,0.22)]";
+      : "relative z-30 bg-nav-bg border-b border-[rgba(217,196,166,0.22)]";
 
   const links = NAV_ITEMS.slice(0, 3); // Home, Events, How It Works
   const rightLinks = NAV_ITEMS.slice(3); // Our Fleet, About, Contact
@@ -134,12 +134,12 @@ function NavGroup({ items, pathname }: { items: NavItem[]; pathname: string }) {
             </Link>
             {/* Dropdown */}
             <div className="invisible absolute left-1/2 top-full z-40 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-              <div className="min-w-[220px] border border-[rgba(192,157,108,0.3)] bg-nav-bg py-2 shadow-xl">
+              <div className="min-w-[220px] border border-[rgba(217,196,166,0.3)] bg-nav-bg py-2 shadow-xl">
                 {item.children.map((c) => (
                   <Link
                     key={c.href}
                     href={c.href}
-                    className={`block whitespace-nowrap px-5 py-[10px] text-[12px] uppercase tracking-nav transition-colors hover:bg-[rgba(192,157,108,0.08)] hover:text-cream ${
+                    className={`block whitespace-nowrap px-5 py-[10px] text-[12px] uppercase tracking-nav transition-colors hover:bg-[rgba(217,196,166,0.08)] hover:text-cream ${
                       pathname === c.href ? "text-gold" : "text-text-hi"
                     }`}
                   >
@@ -201,7 +201,7 @@ function MobileDrawer({
             }
             const expanded = openGroup === item.label;
             return (
-              <li key={item.label} className="border-b border-[rgba(192,157,108,0.12)]">
+              <li key={item.label} className="border-b border-[rgba(217,196,166,0.12)]">
                 <button
                   type="button"
                   onClick={() => setOpenGroup(expanded ? null : item.label)}

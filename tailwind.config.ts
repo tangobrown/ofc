@@ -14,7 +14,7 @@ const config: Config = {
         "bg-alt": "#1c1b19",
         "nav-bg": "#131313",
         // Accents
-        gold: "#c09d6c",
+        gold: "#d9c4a6",
         cream: "#d9c4a6",
         // Text
         "heading-light": "#f2ecdf",

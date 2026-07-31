@@ -26,7 +26,7 @@ export default function Button({
       ? "px-[22px] py-[11px] text-[14px]"
       : "px-[28px] py-[13px] text-[14px]";
   const borderCls =
-    tone === "cream" ? "border-[rgba(242,236,223,0.75)]" : "border-[rgba(192,157,108,0.85)]";
+    tone === "cream" ? "border-[rgba(242,236,223,0.75)]" : "border-[rgba(217,196,166,0.85)]";
 
   const isInternal = href.startsWith("/") && !href.startsWith("//");
   const cls = `btn-outline ${sizeCls} ${borderCls} ${className}`;

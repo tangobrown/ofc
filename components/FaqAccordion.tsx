@@ -16,7 +16,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
       {items.map((item, i) => {
         const isOpen = open === i;
         return (
-          <div key={i} className="border-b border-[rgba(192,157,108,0.22)]">
+          <div key={i} className="border-b border-[rgba(217,196,166,0.22)]">
             <h3 className="m-0">
               <button
                 type="button"

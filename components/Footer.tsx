@@ -3,7 +3,7 @@ import { SOCIAL } from "@/lib/nav";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[rgba(192,157,108,0.18)] px-10 pb-[46px] pt-10 text-center">
+    <footer className="border-t border-[rgba(217,196,166,0.18)] px-10 pb-[46px] pt-10 text-center">
       <div className="mb-[22px] flex justify-center gap-[22px] text-gold">
         <a
           href={SOCIAL.facebook}

@@ -19,7 +19,7 @@
   }
 
   ::selection {
-    background: #c09d6c;
+    background: #d9c4a6;
     color: #161616;
   }
 }
@@ -33,7 +33,7 @@
   }
   .btn-outline:hover {
     @apply bg-gold text-bg;
-    border-color: #c09d6c;
+    border-color: #d9c4a6;
   }
 
   /* Gold eyebrow label above section headings */
