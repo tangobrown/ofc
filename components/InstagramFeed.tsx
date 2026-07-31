@@ -24,7 +24,7 @@ async function getPosts(): Promise<Post[] | null> {
     const posts = feed?.posts;
     if (!Array.isArray(posts) || posts.length === 0) return null;
 
-    return posts.slice(0, 4);
+    return posts.slice(0, 6);
   } catch {
     return null;
   }
@@ -35,7 +35,7 @@ export default async function InstagramFeed() {
   if (!posts) return null;
 
   return (
-    <section className="px-6 pb-24 pt-20 text-center md:px-10 md:pb-28 md:pt-24">
+    <section className="px-[30px] pb-24 pt-20 text-center md:pb-28 md:pt-24">
       <h2 className="m-0 mb-11 font-display text-[clamp(29px,3.3vw,43px)] font-semibold uppercase tracking-[0.05em] text-[#efe9dc]">
         The Latest on{" "}
         <a
@@ -48,8 +48,8 @@ export default async function InstagramFeed() {
         </a>
       </h2>
 
-      {/* Scroll-snap carousel on mobile; 4-up grid from sm upward. No JS/carousel lib. */}
-      <ul className="mx-auto flex max-w-[1120px] snap-x snap-mandatory list-none gap-[18px] overflow-x-auto pb-3 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-4 sm:overflow-visible sm:pb-0 [&::-webkit-scrollbar]:hidden">
+      {/* Scroll-snap carousel on mobile; full-width 6-up grid from sm upward. No JS/carousel lib. */}
+      <ul className="flex w-full snap-x snap-mandatory list-none gap-[20px] overflow-x-auto pb-3 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-6 sm:overflow-visible sm:pb-0 [&::-webkit-scrollbar]:hidden">
         {posts.map((post) => {
           const { small, medium } = post.sizes;
           // prunedCaption has hashtags stripped; prefer it wherever text is shown.
