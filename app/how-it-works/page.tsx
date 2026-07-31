@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
         title="Build Your Package"
         subtitle="Build your party package in seconds"
         subtitleItalic={false}
-        showArrow
+        cta={{ label: "Check Availability", href: BOOKING_URL }}
       />
 
       {/* Steps */}

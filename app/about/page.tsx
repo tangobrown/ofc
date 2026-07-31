@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
+import { BOOKING_URL } from "@/lib/nav";
 import OffsetSection from "@/components/OffsetSection";
 import FlappersCta from "@/components/FlappersCta";
 import { IMG } from "@/lib/images";
@@ -18,7 +19,7 @@ export default function AboutPage() {
         imageAlt="Dwayne, founder of The Old Fashioned Cocktail Co."
         title="About Us"
         subtitle="Hard Liquor. Easy Parties."
-        showArrow
+        cta={{ label: "Check Availability", href: BOOKING_URL }}
       />
 
       {/* What Do We Do? — heading left / text right, no photo */}

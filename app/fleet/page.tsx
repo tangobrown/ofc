@@ -74,7 +74,7 @@ export default function FleetPage() {
         imageAlt="The mobile cocktail bar set up outdoors"
         title="Meet the Fleet"
         subtitle="Meet our fleet mobile cocktail bars"
-        showArrow
+        cta={{ label: "Check Availability", href: BOOKING_URL }}
       />
 
       {PROFILES.map((p) => (

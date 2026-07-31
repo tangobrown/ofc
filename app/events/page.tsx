@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
+import { BOOKING_URL } from "@/lib/nav";
 import OffsetSection from "@/components/OffsetSection";
 import FlappersCta from "@/components/FlappersCta";
 import Button from "@/components/Button";
@@ -21,7 +22,7 @@ export default function EventsPage() {
         imageAlt="A cocktail being served at an event"
         title="Mobile Cocktail Bar for Events"
         subtitle="What's your occasion?"
-        showArrow
+        cta={{ label: "Check Availability", href: BOOKING_URL }}
       />
 
       <OffsetSection

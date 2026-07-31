@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
+import { BOOKING_URL } from "@/lib/nav";
 import Placeholder from "@/components/Placeholder";
 import { POSTS } from "@/lib/blog";
 
@@ -19,6 +20,7 @@ export default function BlogIndexPage() {
         title="Tips 'n Tricks"
         subtitle="Shake up your bartending skills."
         height="short"
+        cta={{ label: "Check Availability", href: BOOKING_URL }}
       />
 
       <section className="mx-auto max-w-blog-index px-6 py-16">

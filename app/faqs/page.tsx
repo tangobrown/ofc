@@ -188,7 +188,7 @@ export default function FaqsPage() {
         imageAlt="1920s flappers with cocktails"
         title="Frequently Asked Questions"
         subtitle="Lookin' for answers? You've come to the right place…"
-        showArrow
+        cta={{ label: "Check Availability", href: BOOKING_URL }}
       />
 
       <section className="mx-auto max-w-faq px-6 py-20" id="content">
