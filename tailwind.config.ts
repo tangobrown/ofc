@@ -19,7 +19,7 @@ const config: Config = {
         // Text
         "heading-light": "#f2ecdf",
         "text-hi": "#e7e1d5",
-        body: "#c4bdb0",
+        body: "#ffffff",
         "body-dim": "#b7b0a3",
         muted: "#8a8377",
         "muted-2": "#7d766a",
