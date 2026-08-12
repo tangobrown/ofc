@@ -25,7 +25,17 @@ export default function Footer() {
         </a>
       </div>
       <p className="font-body text-[12px] tracking-[0.08em] text-muted-2">
-        © 2026 The Old Fashioned Cocktail Co. — All rights reserved.
+        © 2026 The Old Fashioned Cocktail Co. — All rights reserved.{" "}
+        Crafted by{" "}
+        <a
+          href="https://tangobrown.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-cream"
+        >
+          Tango Brown
+        </a>
+        .
       </p>
     </footer>
   );
