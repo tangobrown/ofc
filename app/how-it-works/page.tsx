@@ -68,6 +68,8 @@ export default function HowItWorksPage() {
           </div>
         </div>
 
+        <hr className="border-0 border-t border-gold/15" />
+
         {/* Step Two */}
         <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-[auto_1fr] md:gap-[50px]">
           <div className="md:w-[230px]">
@@ -103,6 +105,8 @@ export default function HowItWorksPage() {
           </div>
         </div>
 
+        <hr className="border-0 border-t border-gold/15" />
+
         {/* Step Three */}
         <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-[auto_1fr] md:gap-[50px]">
           <div className="md:w-[230px]">
@@ -124,6 +128,8 @@ export default function HowItWorksPage() {
             </div>
           </div>
         </div>
+
+        <hr className="border-0 border-t border-gold/15" />
 
         {/* Step Four */}
         <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-[auto_1fr] md:gap-[50px]">
