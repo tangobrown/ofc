@@ -64,7 +64,7 @@ const jsonLd = {
   name: SITE_NAME,
   description: DEFAULT_DESCRIPTION,
   url: SITE_URL,
-  logo: LOGO_SRC,
+  logo: `${SITE_URL}${LOGO_SRC}`,
   image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
   priceRange: "$$",
   areaServed: { "@type": "State", name: "New York" },
