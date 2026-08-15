@@ -8,7 +8,7 @@ import { BOOKING_URL } from "@/lib/nav";
  * Home-only full-screen video hero. The smoke .mp4 has audio, so we force-mute
  * via ref after mount (React/Next won't reliably apply the `muted` attribute).
  */
-export default function VideoHero({ src }: { src: string }) {
+export default function VideoHero({ src, poster }: { src?: string; poster: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -28,9 +28,10 @@ export default function VideoHero({ src }: { src: string }) {
         muted
         loop
         playsInline
+        poster={poster}
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src={src} type="video/mp4" />
+        {src ? <source src={src} type="video/mp4" /> : null}
       </video>
       <div className="absolute inset-0 bg-home-scrim" />
 

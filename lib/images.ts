@@ -1,27 +1,30 @@
-// Real hosted images referenced by the handoff (client CDN). These can later be
-// re-hosted locally; kept as remote URLs for now (allowed in next.config.mjs).
-const CDN = "https://theoldfashionedcocktailco.com/wp-content/uploads";
+// Site imagery, self-hosted under /public/images. Previously these were
+// hotlinked from the old WordPress CDN, which stopped resolving once the
+// domain was pointed at this site.
 
 export const IMG = {
   fleet: {
-    oldFashionedMain2: `${CDN}/2023/04/The_Old_Fashioned_Main2.jpg`,
-    oldFashionedMain: `${CDN}/2021/05/The_Old_Fashioned_Main.jpg`,
-    oldFashioned1: `${CDN}/2021/05/The_Old_Fashioned_1.jpg`,
-    oldFashioned2: `${CDN}/2021/05/The_Old_Fashioned_2.jpg`,
-    tommyGunMain2: `${CDN}/2023/04/Tommy_Gun_Cocktail_Cart_Main2.jpg`,
-    tommyGunMain: `${CDN}/2021/05/Tommy_Gun_Cocktail_Cart_Main.jpg`,
-    tommyGun1: `${CDN}/2021/05/Tommy_Gun_Cocktail_Cart_1.jpg`,
-    tommyGun2: `${CDN}/2021/05/Tommy_Gun_Cocktail_Cart_2.jpg`,
+    oldFashionedMain2: `/images/fleet/The_Old_Fashioned_Main2.webp`,
+    oldFashionedMain: `/images/fleet/The_Old_Fashioned_Main.webp`,
+    oldFashioned1: `/images/fleet/The_Old_Fashioned_1.webp`,
+    oldFashioned2: `/images/fleet/The_Old_Fashioned_2.webp`,
+    tommyGunMain2: `/images/fleet/Tommy_Gun_Cocktail_Cart_Main2.webp`,
+    tommyGunMain: `/images/fleet/Tommy_Gun_Cocktail_Cart_Main.webp`,
+    tommyGun1: `/images/fleet/Tommy_Gun_Cocktail_Cart_1.webp`,
+    tommyGun2: `/images/fleet/Tommy_Gun_Cocktail_Cart_2.webp`,
   },
   events: {
-    weddingCigars: `${CDN}/2020/06/Wedding-event-image-with-cigars.jpg`,
-    birthday: `${CDN}/2020/05/Mobile-cocktail-bar-serving-a-birthday-event.jpg`,
-    corporate: `${CDN}/2020/05/Mobile-cocktail-bar-for-corporate-events.jpg`,
-    smokeyBar: `${CDN}/2021/03/Smokey_Mobile_Cocktail_Bar.jpg`,
-    barTender: `${CDN}/2021/03/Mobile_Cocktail_Bar_Tender.jpg`,
-    dwayne: `${CDN}/2020/06/Dwayne-Keaney-Old-Fashioned-Cocktails.jpg`,
+    weddingCigars: `/images/events/Wedding-event-image-with-cigars.webp`,
+    // TODO: replace stand-in with the real birthday photo when available.
+    birthday: `/images/events/birthday-celebration.jpg`,
+    corporate: `/images/events/Mobile-cocktail-bar-for-corporate-events.webp`,
+    smokeyBar: `/images/events/Smokey_Mobile_Cocktail_Bar.webp`,
+    barTender: `/images/events/Mobile_Cocktail_Bar_Tender.webp`,
+    dwayne: `/images/events/Dwayne-Keaney-Old-Fashioned-Cocktails.webp`,
   },
   home: {
-    smokeVideo: `${CDN}/2025/08/Smoke-3-3.mp4`,
+    // The smoke background video (.mp4) was not re-supplied; the home hero
+    // falls back to this poster image until the video is re-hosted.
+    smokePoster: `/images/home/smoke-poster.jpg`,
   },
 } as const;
