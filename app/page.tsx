@@ -34,7 +34,7 @@ const EVENTS = [
 export default function HomePage() {
   return (
     <PageShell>
-      <VideoHero src={IMG.home.smokeVideo} />
+      <VideoHero poster={IMG.home.smokePoster} />
 
       {/* Speakeasy */}
       <section className="mx-auto grid max-w-content grid-cols-1 gap-10 px-5 md:px-10 pb-[90px] pt-[120px] md:grid-cols-[1fr_1.35fr] md:gap-[60px]">
