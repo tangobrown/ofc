@@ -369,7 +369,7 @@ export const POSTS: BlogPost[] = [
     author: "Tim Brown",
     excerpt:
       "Serving drinks with a measure of style requires a focus on the details. Get the basics right and you may meet expectations. But to be memorable, you need to surpass them. Ask yourself – when was the last time you found yourself jawing to a friend about the new joint in town because \"they just did the basics well…\" Never,…",
-    featureImage: `${CDN}/2020/06/Cocktails-made-by-Dwayne-from-Old-Fashioned.jpg`,
+    featureImage: `/images/carousel/Cocktails-made-by-Dwayne-from-Old-Fashioned.jpg`,
     body: (
       <>
         <p className={p}>
@@ -431,7 +431,7 @@ export const POSTS: BlogPost[] = [
           <div>
             <div className="relative aspect-square">
               <Image
-                src={`${CDN}/2020/09/Old_Fashioned_Cocktail_Clear_Ice.jpg`}
+                src={`/images/blog/Old_Fashioned_Cocktail_Clear_Ice.jpg`}
                 alt="Clear ice"
                 fill
                 sizes="(max-width: 820px) 50vw, 400px"
@@ -499,7 +499,7 @@ export const POSTS: BlogPost[] = [
 
         <div className="relative aspect-[16/9] my-8">
           <Image
-            src={`${CDN}/2020/09/Ice-with-Ice-Stick.jpg`}
+            src={`/images/blog/Ice-with-Ice-Stick.jpg`}
             alt="Ice with ice stick"
             fill
             sizes="(max-width: 820px) 100vw, 820px"
@@ -532,7 +532,7 @@ export const POSTS: BlogPost[] = [
     author: "Tim Brown",
     excerpt:
       "The history of old fashioned cocktails goes way back. We're talkin' all the way to the 1800's back. Folks are still quarreling over the exact date to this day – we're not surprised the fellas and gals who made it first were a little fuzzy on the details after. But the fact that they're still as popular as ever shows…",
-    featureImage: `${CDN}/2020/06/Ingredients-for-cocktails.jpg`,
+    featureImage: `/images/carousel/Ingredients-for-cocktails.jpg`,
     body: (
       <>
         <h2 className={h2}>What&apos;s an Old Fashioned?</h2>
@@ -669,7 +669,7 @@ export const POSTS: BlogPost[] = [
     author: "Tim Brown",
     excerpt:
       "Why would you choose to throw a party the old fashioned way? It's a fair question, we guess. But perhaps \"why wouldn't you..?\" would be a better one. The classics become classics for a reason, after all. We believe that a good old fashioned party and a good old fashioned cocktail share the same key elements: a few simple ingredients…",
-    featureImage: `${CDN}/2020/06/Old-school-music-player.jpg`,
+    featureImage: `/images/blog/Old-school-music-player.jpg`,
     body: (
       <>
         <p className={p}>
