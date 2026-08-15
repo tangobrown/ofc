@@ -31,8 +31,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const LOGO_SRC =
-  "https://theoldfashionedcocktailco.com/wp-content/uploads/2020/06/The-Old-Fashoioned-Primary-Light.png";
+export const LOGO_SRC = "/images/logo-primary-light.png";
 
 export const SOCIAL = {
   facebook: "https://www.facebook.com/theoldfashionedcocktailco/",
