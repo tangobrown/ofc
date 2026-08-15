@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-const CDN = "https://theoldfashionedcocktailco.com/wp-content/uploads";
-
 export type BlogPost = {
   slug: string;
   title: string;
@@ -33,7 +31,7 @@ export const POSTS: BlogPost[] = [
     author: "Tim Brown",
     excerpt:
       "Welcome back to The Old Fashioned Connoisseur Club. In this blog series we'll be imparting a few tidbits of our hard-earned knowledge, distilled over years of slingin' bottles and mixing up a storm. Previously we've looked deep into whiskey, and this time out we're headin' south of the border to give mezcal a well-deserved mention. Why drink mezcal? Mexican legend…",
-    featureImage: `${CDN}/2021/02/mezcal__drink_with_oranges_on_a_beach-900x536.jpg`,
+    featureImage: `/images/carousel/Close-up-of-cocktail-made.jpg`,
     body: (
       <>
         <h2 className={h2}>Welcome back to The Old Fashioned Connoisseur Club</h2>
@@ -202,7 +200,7 @@ export const POSTS: BlogPost[] = [
     author: "Tim Brown",
     excerpt:
       "A brand new blog series where we'll be imparting a few tidbits of our hard-earned knowledge, distilled over years of slingin' bottles and mixing up a storm. Where to start the series? Well, where better to start than whiskey? A spirit that's at the heart of many a classic cocktail, a little extra whiskey know-how will take your cocktails a…",
-    featureImage: `${CDN}/2020/12/Range_Of_Whisky_In_A_Bar-900x600.jpg`,
+    featureImage: `/images/carousel/Old-fashioned-cocktail-bar.jpg`,
     body: (
       <>
         <p className={p}>
@@ -262,8 +260,8 @@ export const POSTS: BlogPost[] = [
 
         <div className="relative aspect-[16/9] my-8">
           <Image
-            src={`${CDN}/2020/12/Whisky_Cocktail_Made_In_Bar.jpg`}
-            alt="Whisky cocktail made in bar"
+            src={`/images/carousel/Cocktail-making-in-progress.jpg`}
+            alt="Bartender making a whiskey cocktail at the bar"
             fill
             sizes="(max-width: 820px) 100vw, 820px"
             className="object-cover"
@@ -308,8 +306,8 @@ export const POSTS: BlogPost[] = [
 
         <div className="relative aspect-[16/9] my-8">
           <Image
-            src={`${CDN}/2020/12/Range_Of_Whisky_In_A_Bar.jpg`}
-            alt="Range of whisky"
+            src={`/images/carousel/Ingredients-for-cocktails.jpg`}
+            alt="A bottle of whiskey with bitters and a mixing glass"
             fill
             sizes="(max-width: 820px) 100vw, 820px"
             className="object-cover"
@@ -415,31 +413,17 @@ export const POSTS: BlogPost[] = [
           <li>Tap water</li>
         </ul>
 
-        <div className="grid grid-cols-2 gap-5 my-8">
-          <div>
-            <div className="relative aspect-square">
-              <Image
-                src={`${CDN}/2020/09/abstract-18722_1280.jpg`}
-                alt="Cloudy ice"
-                fill
-                sizes="(max-width: 820px) 50vw, 400px"
-                className="object-cover"
-              />
-            </div>
-            <p className={cap}>Cloudy Ice</p>
+        <div className="my-8">
+          <div className="relative aspect-[16/9]">
+            <Image
+              src={`/images/blog/Old_Fashioned_Cocktail_Clear_Ice.jpg`}
+              alt="A cocktail served over a block of crystal-clear ice"
+              fill
+              sizes="(max-width: 820px) 100vw, 820px"
+              className="object-cover"
+            />
           </div>
-          <div>
-            <div className="relative aspect-square">
-              <Image
-                src={`/images/blog/Old_Fashioned_Cocktail_Clear_Ice.jpg`}
-                alt="Clear ice"
-                fill
-                sizes="(max-width: 820px) 50vw, 400px"
-                className="object-cover"
-              />
-            </div>
-            <p className={cap}>Clear Ice</p>
-          </div>
+          <p className={cap}>Crystal-clear ice, made the Old Fashioned way</p>
         </div>
 
         <h2 className={h2}>The directional freezing process</h2>
@@ -611,8 +595,8 @@ export const POSTS: BlogPost[] = [
 
         <div className="relative aspect-[16/9] my-8">
           <Image
-            src={`${CDN}/2020/06/Smokey-cocktails-old-fashioned.jpg`}
-            alt="Smokey old fashioned cocktail"
+            src={`/images/carousel/Old-fashioned-cocktail-bar.jpg`}
+            alt="An Old Fashioned cocktail on the bar"
             fill
             sizes="(max-width: 820px) 100vw, 820px"
             className="object-cover"
@@ -701,6 +685,16 @@ export const POSTS: BlogPost[] = [
           for a range of party options based on how much scratch you plan to spend.
         </p>
 
+        <div className="relative aspect-[16/9] my-8">
+          <Image
+            src={`/images/blog/American-money.jpg`}
+            alt="A fan of one-dollar bills"
+            fill
+            sizes="(max-width: 820px) 100vw, 820px"
+            className="object-cover"
+          />
+        </div>
+
         <h2 className={h2}>Choose a venue</h2>
         <p className={p}>
           The setting you choose will have a powerful impact on the atmosphere and style of your
@@ -717,6 +711,16 @@ export const POSTS: BlogPost[] = [
           sure everyone stays comfortable throughout the night.
         </p>
 
+        <div className="relative aspect-[16/9] my-8">
+          <Image
+            src={`/images/blog/wedding-image.jpg`}
+            alt="An outdoor event space set with tables beneath a tree"
+            fill
+            sizes="(max-width: 820px) 100vw, 820px"
+            className="object-cover"
+          />
+        </div>
+
         <h2 className={h2}>Curate your guest list</h2>
         <p className={p}>
           Deciding who you do or don&apos;t want to invite to your party can be a tough balancing act.
@@ -730,6 +734,16 @@ export const POSTS: BlogPost[] = [
           Next, you need to decide how to invite people. For an authentic 1920&apos;s touch, send your
           guests a secret password they&apos;ll need to use to gain access to your event.
         </p>
+
+        <div className="relative aspect-[16/9] my-8">
+          <Image
+            src={`/images/blog/Typewriter.jpg`}
+            alt="A vintage typewriter on a wooden table"
+            fill
+            sizes="(max-width: 820px) 100vw, 820px"
+            className="object-cover"
+          />
+        </div>
 
         <h2 className={h2}>Pick a theme</h2>
         <p className={p}>
@@ -748,6 +762,16 @@ export const POSTS: BlogPost[] = [
           let your imagination run wild – think secret rooms, photo booths, interactive installations
           or unconventional games and prizes.
         </p>
+
+        <div className="relative aspect-[16/9] my-8">
+          <Image
+            src={`/images/blog/Old-School-library.jpg`}
+            alt="A vintage library with a hidden bookshelf door"
+            fill
+            sizes="(max-width: 820px) 100vw, 820px"
+            className="object-cover"
+          />
+        </div>
 
         <h2 className={h2}>Set the mood</h2>
         <p className={p}>
@@ -772,6 +796,16 @@ export const POSTS: BlogPost[] = [
           unusual ingredients can provide an additional talking point.
         </p>
 
+        <div className="relative aspect-[16/9] my-8">
+          <Image
+            src={`/images/blog/Food-and-drink.jpg`}
+            alt="An outdoor spread of grilled food and drinks"
+            fill
+            sizes="(max-width: 820px) 100vw, 820px"
+            className="object-cover"
+          />
+        </div>
+
         <h2 className={h2}>Sort something to drink</h2>
         <p className={p}>
           This is the easy part –{" "}
@@ -787,6 +821,16 @@ export const POSTS: BlogPost[] = [
           night. For a real showstopper, offer a signature drink with a personal twist that guests
           can&apos;t get anywhere else.
         </p>
+
+        <div className="relative aspect-[16/9] my-8">
+          <Image
+            src={`/images/blog/Drinks-cheers.jpg`}
+            alt="Friends raising a toast with cocktails"
+            fill
+            sizes="(max-width: 820px) 100vw, 820px"
+            className="object-cover"
+          />
+        </div>
 
         <h2 className={h2}>Be the host with a toast</h2>
         <p className={p}>
