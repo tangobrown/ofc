@@ -4,8 +4,11 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import PageShell from "@/components/PageShell";
 import Placeholder from "@/components/Placeholder";
+import JsonLd from "@/components/JsonLd";
 import { POSTS } from "@/lib/blog";
 import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "@/lib/seo";
+import { abs, breadcrumbSchema } from "@/lib/schema";
+import { LOGO_SRC } from "@/lib/nav";
 
 export function generateStaticParams() {
   return POSTS.map((post) => ({ slug: post.slug }));
@@ -35,7 +38,7 @@ export async function generateMetadata({
   const ogTitle = `${post.title} · ${SITE_NAME}`;
 
   return {
-    title: post.title,
+    title: { absolute: post.title },
     description,
     alternates: { canonical: path },
     openGraph: {
@@ -43,7 +46,7 @@ export async function generateMetadata({
       title: ogTitle,
       description,
       url: path,
-      images: [{ url: image, alt: post.title }],
+      images: [{ url: image, alt: post.featureImageAlt ?? post.title }],
       publishedTime: isoDate(post.date),
       authors: [post.author],
       section: post.category,
@@ -61,18 +64,47 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const prev = index > 0 ? POSTS[index - 1] : undefined;
   const next = index < POSTS.length - 1 ? POSTS[index + 1] : undefined;
 
-  const jsonLd = {
+  const articleUrl = `${SITE_URL}/blog/${post.slug}`;
+  const published = isoDate(post.date);
+  const blogPosting = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    ...(post.featureImage ? { image: [post.featureImage] } : {}),
-    datePublished: isoDate(post.date),
-    author: { "@type": "Person", name: post.author },
-    publisher: { "@type": "Organization", name: SITE_NAME },
+    image: [abs(post.featureImage ?? DEFAULT_OG_IMAGE)],
+    datePublished: published,
+    dateModified: published,
+    author: { "@type": "Person", name: post.author, url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      logo: { "@type": "ImageObject", url: abs(LOGO_SRC) },
+    },
     articleSection: post.category,
-    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+    url: articleUrl,
   };
+
+  const breadcrumb = breadcrumbSchema([
+    { name: "Blog", path: "/blog" },
+    { name: post.title, path: `/blog/${post.slug}` },
+  ]);
+
+  const howTo = post.howTo
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: post.howTo.name,
+        description: post.howTo.description,
+        ...(post.featureImage ? { image: abs(post.featureImage) } : {}),
+        step: post.howTo.steps.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.name,
+          text: s.text,
+        })),
+      }
+    : null;
 
   return (
     <PageShell navVariant="solid">
@@ -89,7 +121,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           {post.featureImage ? (
             <Image
               src={post.featureImage}
-              alt={post.title}
+              alt={post.featureImageAlt ?? post.title}
               fill
               priority
               sizes="(max-width: 820px) 100vw, 820px"
@@ -120,10 +152,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         )}
       </nav>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={howTo ? [blogPosting, breadcrumb, howTo] : [blogPosting, breadcrumb]} />
     </PageShell>
   );
 }

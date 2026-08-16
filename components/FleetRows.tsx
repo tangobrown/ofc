@@ -18,7 +18,7 @@ export default function FleetRows() {
           {FLEET.map((m) => (
             <div key={m.anchor} className="grid grid-cols-1 items-center gap-14 md:grid-cols-2">
               <div className="relative aspect-[3/2] overflow-hidden">
-                <Image src={m.image} alt={m.name} fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover" />
+                <Image src={m.image} alt={m.alt} fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover" />
               </div>
               <div>
                 <h3 className="m-0 mb-4 font-display text-[22px] font-semibold uppercase tracking-[0.03em] text-heading-light">

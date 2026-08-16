@@ -5,13 +5,17 @@ import Hero from "@/components/Hero";
 import { BOOKING_URL } from "@/lib/nav";
 import OffsetSection from "@/components/OffsetSection";
 import FlappersCta from "@/components/FlappersCta";
+import JsonLd from "@/components/JsonLd";
+import { abs, breadcrumbSchema, ORG_ID } from "@/lib/schema";
 import { IMG } from "@/lib/images";
 
 export const metadata: Metadata = pageMeta({
-  title: "About Us",
+  title: "About The Old Fashioned Cocktail Co. | New York",
   description:
     "Hard liquor, easy parties. The story behind The Old Fashioned Cocktail Co., New York's vintage mobile cocktail bar hire company, and founder Dwayne.",
   path: "/about",
+  image: "/images/about-hero.jpg",
+  imageAlt: "Dwayne, founder of The Old Fashioned Cocktail Co.",
 });
 
 export default function AboutPage() {
@@ -79,11 +83,35 @@ export default function AboutPage() {
           Our founder, Dwayne, was drawn to New York from his native Ireland (via Wales) like a
           bartending moth to a flame. The Old Fashioned Cocktail Company is a product of his
           considerable industry expertise, passion and a natural inclination toward lifting spirits.
+          Take a look at{" "}
+          <a href="/fleet" className="text-gold hover:text-cream">our vintage mobile bars</a> or{" "}
+          <a href="/how-it-works" className="text-gold hover:text-cream">see how booking works</a> to
+          bring the party to your place.
         </p>
       </OffsetSection>
 
       <FlappersCta subtitle="Check availability for your event now" />
 
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: "About The Old Fashioned Cocktail Co.",
+            url: abs("/about"),
+            about: { "@id": ORG_ID },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Dwayne",
+            jobTitle: "Founder",
+            nationality: "Irish",
+            worksFor: { "@id": ORG_ID },
+          },
+          breadcrumbSchema([{ name: "About", path: "/about" }]),
+        ]}
+      />
     </PageShell>
   );
 }
