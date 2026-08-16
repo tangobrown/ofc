@@ -4,14 +4,19 @@ import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import Button from "@/components/Button";
+import JsonLd from "@/components/JsonLd";
+import { abs, breadcrumbSchema } from "@/lib/schema";
+import { SITE_NAME } from "@/lib/seo";
 import { IMG } from "@/lib/images";
 import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = pageMeta({
-  title: "Our Fleet of Mobile Cocktail Bars",
+  title: "Our Mobile Cocktail Bar Fleet | New York Hire",
   description:
     "Meet our vintage mobile cocktail bars: The Old Fashioned oak bar and Little Tommy Gun, a converted Piaggio Ape tap truck. Available for hire across New York.",
   path: "/fleet",
+  image: "/images/fleet/The_Old_Fashioned_Main.webp",
+  imageAlt: "The Old Fashioned oak mobile cocktail bar",
 });
 
 type Profile = {
@@ -29,8 +34,8 @@ const PROFILES: Profile[] = [
     id: "the-old-fashioned",
     heading: "Meet 'The Old Fashioned'",
     photos: [
-      { src: IMG.fleet.oldFashionedMain, alt: "The Old Fashioned bar" },
-      { src: IMG.fleet.oldFashioned2, alt: "The Old Fashioned detail" },
+      { src: IMG.fleet.oldFashionedMain, alt: "The Old Fashioned oak mobile cocktail bar" },
+      { src: IMG.fleet.oldFashioned2, alt: "Brass and leather detailing on The Old Fashioned bar" },
     ],
     capacity: "Bartender Capacity: 1-3",
     description: (
@@ -50,8 +55,8 @@ const PROFILES: Profile[] = [
     id: "tommy-gun",
     heading: "Say Hello to Little Tommy Gun",
     photos: [
-      { src: IMG.fleet.tommyGunMain, alt: "Little Tommy Gun cart" },
-      { src: IMG.fleet.tommyGun1, alt: "Little Tommy Gun detail" },
+      { src: IMG.fleet.tommyGunMain, alt: "Little Tommy Gun Piaggio Ape tap-truck cocktail bar" },
+      { src: IMG.fleet.tommyGun1, alt: "Draft taps and barrels on the Little Tommy Gun cart" },
     ],
     capacity: "Bartender Capacity: 1-2",
     description: (
@@ -123,6 +128,34 @@ export default function FleetPage() {
           </div>
         </section>
       ))}
+
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "The Old Fashioned — Mobile Cocktail Bar",
+            description:
+              "Our flagship mobile cocktail bar, handcrafted from white oak, vintage brass and genuine leather. Perfect for medium-to-large events indoors or outdoors. Bartender capacity 1–3.",
+            image: abs(IMG.fleet.oldFashionedMain),
+            brand: { "@type": "Brand", name: SITE_NAME },
+            category: "Mobile cocktail bar hire",
+            url: abs("/fleet#the-old-fashioned"),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Little Tommy Gun — Piaggio Ape Tap Truck Bar",
+            description:
+              "A meticulously converted Piaggio Ape tap truck serving beers, wines and cocktails on draft. Ideal for smaller or indoor parties, or alongside The Old Fashioned at larger events. Bartender capacity 1–2.",
+            image: abs(IMG.fleet.tommyGunMain),
+            brand: { "@type": "Brand", name: SITE_NAME },
+            category: "Mobile cocktail bar hire",
+            url: abs("/fleet#tommy-gun"),
+          },
+          breadcrumbSchema([{ name: "Fleet", path: "/fleet" }]),
+        ]}
+      />
     </PageShell>
   );
 }

@@ -7,14 +7,18 @@ import { EVENT_CAROUSEL } from "@/lib/carousel";
 import OffsetSection from "@/components/OffsetSection";
 import FleetRows from "@/components/FleetRows";
 import FlappersCta from "@/components/FlappersCta";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
 import { IMG } from "@/lib/images";
 import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = pageMeta({
-  title: "Wedding Cocktail Bar Hire",
+  title: "Wedding Cocktail Bar Hire in New York | The Old Fashioned",
   description:
-    "Wow your wedding guests with a vintage mobile cocktail bar. The Old Fashioned Cocktail Co. serves handcrafted cocktails in prohibition-era style across New York.",
+    "Wow your wedding guests with a vintage mobile cocktail bar. Handcrafted cocktails, prohibition-era style and expert bartenders across New York.",
   path: "/weddings",
+  image: "/images/weddings-hero.jpg",
+  imageAlt: "A cocktail being served at a wedding",
 });
 
 
@@ -55,9 +59,11 @@ export default function WeddingsPage() {
         imageSide="right"
       >
         <p>
-          We&apos;ll serve up a storm in true prohibition-era style. But unlike a traditional speakeasy,
-          your guests won&apos;t need to come looking for us – we&apos;ll find you! Our nifty range of
-          mobile cocktail bars can be tailored to weddings of all sizes and themes in the New York area.
+          We bring the prohibition-era glamour straight to your reception – no secret password
+          required. From an intimate elopement to a 200-guest celebration, our{" "}
+          <a href="/fleet" className="text-gold hover:text-cream">vintage mobile cocktail bars</a>{" "}
+          are styled to match your wedding theme, and we&apos;ll craft a signature couple&apos;s
+          cocktail to toast the newlyweds anywhere in the New York area.
         </p>
       </OffsetSection>
 
@@ -92,6 +98,19 @@ export default function WeddingsPage() {
         }
       />
 
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: "Wedding Cocktail Bar Hire",
+            description:
+              "Vintage mobile cocktail bar hire for weddings across New York — handcrafted cocktails, prohibition-era styling and expert bartenders.",
+            path: "/weddings",
+            image: "/images/weddings-hero.jpg",
+            serviceType: "Wedding cocktail bar hire",
+          }),
+          breadcrumbSchema([{ name: "Weddings", path: "/weddings" }]),
+        ]}
+      />
     </PageShell>
   );
 }
