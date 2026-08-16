@@ -7,14 +7,18 @@ import { EVENT_CAROUSEL } from "@/lib/carousel";
 import OffsetSection from "@/components/OffsetSection";
 import FleetRows from "@/components/FleetRows";
 import FlappersCta from "@/components/FlappersCta";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
 import { IMG } from "@/lib/images";
 import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = pageMeta({
-  title: "Corporate Event Cocktail Bar Hire",
+  title: "Corporate Cocktail Bar Hire, New York | The Old Fashioned",
   description:
-    "Mix business and pleasure with a mobile cocktail bar for your office party, product launch or networking event. Pro bartenders and signature cocktails across New York.",
+    "A mobile cocktail bar for your office party, product launch or networking event — pro bartenders and signature cocktails across New York.",
   path: "/corporate",
+  image: "/images/corporate-hero.jpg",
+  imageAlt: "A cocktail being served at a corporate event",
 });
 
 
@@ -53,9 +57,11 @@ export default function CorporatePage() {
         imageSide="right"
       >
         <p>
-          We&apos;ll serve up a storm in true prohibition-era style. But unlike a traditional speakeasy,
-          your guests won&apos;t need to come looking for us – we&apos;ll find you! Our nifty range of
-          mobile cocktail bars can be tailored to events of all sizes and themes in the New York area.
+          We bring the prohibition-era theatre to your venue – no secret knock needed. Whether
+          it&apos;s a product launch, holiday party or client reception anywhere in the New York area,
+          our{" "}
+          <a href="/fleet" className="text-gold hover:text-cream">vintage mobile cocktail bars</a>{" "}
+          scale to your headcount and brief, and the serve can be branded to fit the occasion.
         </p>
       </OffsetSection>
 
@@ -88,6 +94,19 @@ export default function CorporatePage() {
         }
       />
 
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: "Corporate Event Cocktail Bar Hire",
+            description:
+              "Mobile cocktail bar hire for corporate events across New York — office parties, product launches and networking events with professional bartenders.",
+            path: "/corporate",
+            image: "/images/corporate-hero.jpg",
+            serviceType: "Corporate event cocktail bar hire",
+          }),
+          breadcrumbSchema([{ name: "Corporate", path: "/corporate" }]),
+        ]}
+      />
     </PageShell>
   );
 }

@@ -17,7 +17,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
         const isOpen = open === i;
         return (
           <div key={i} className="border-b border-[rgba(217,196,166,0.22)]">
-            <h3 className="m-0">
+            <h2 className="m-0">
               <button
                 type="button"
                 aria-expanded={isOpen}
@@ -35,7 +35,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
                   {isOpen ? "−" : "+"}
                 </span>
               </button>
-            </h3>
+            </h2>
             <div
               className={`grid transition-all duration-300 ${
                 isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"

@@ -4,12 +4,14 @@ import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import FaqAccordion from "@/components/FaqAccordion";
 import DecoFrameCta from "@/components/DecoFrameCta";
+import JsonLd from "@/components/JsonLd";
+import { faqPageSchema, breadcrumbSchema } from "@/lib/schema";
 import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = pageMeta({
-  title: "FAQs",
+  title: "Cocktail Bar Hire FAQs | The Old Fashioned Co.",
   description:
-    "Answers to common questions about booking our mobile cocktail bars: coverage area, setup time, space and power needs, insurance, alcohol and permits.",
+    "Answers on booking our mobile cocktail bars: New York coverage area, setup time, space and power needs, insurance, alcohol and permits.",
   path: "/faqs",
 });
 
@@ -159,27 +161,78 @@ const FAQ_ITEMS = [
     a: (
       <>
         <p className="mb-4">
-          As in the question above; in New York that will depend on where the event will take place:
+          It depends on the venue. For an event at a PRIVATE RESIDENCE (your home or someone
+          else&apos;s), no permit is required to serve alcohol.
         </p>
         <p className="mb-4">
-          If you are hosting the event at your home or another PRIVATE RESIDENCE, then yes you can
-          supply your own alcohol. However, our packages are designed as an all inclusive service where
-          we take care of all of these menial tasks so you don&apos;t have to.
+          For an event at a VENUE, COMMERCIAL PROPERTY, or anywhere that is NOT a private residence, a
+          liquor license and permit are required by law. The good news? We handle all of that red tape
+          for you &ndash; securing the necessary permits and providing the Certificates of Insurance
+          (COI) your venue will require.
         </p>
         <p className="mb-4">
-          If the event is being hosted at a VENUE, COMMERCIAL PROPERTY, or any other destination that is
-          NOT A PRIVATE RESIDENCE a liquor license and permit is required to serve alcohol therefore you
-          cannot, by law, provide your own alcohol. We will take care of all the red tape for you and
-          obtain all necessary permits and provide the Certificates of Insurance (COI) that your venue
-          WILL require.
-        </p>
-        <p className="mb-4">
-          There are bar companies out there that will tell you otherwise, don&apos;t waste your time
-          just to be let down right before your event when they get rejected by your venue! Check with
-          your venue RIGHT AWAY!
+          Some bar companies will tell you otherwise. Don&apos;t risk being turned away on the day &ndash;
+          check your venue&apos;s requirements right away, and we&apos;ll take care of the rest.
         </p>
       </>
     ),
+  },
+];
+
+// Plain-text mirror of FAQ_ITEMS for FAQPage structured data (rich results +
+// AI answer engines). Keep answers in sync with the rendered copy above.
+const FAQ_SCHEMA: { q: string; a: string }[] = [
+  {
+    q: "How many people can you cater for?",
+    a: "We offer a range of packages to suit any sized event, from intimate gatherings to large parties. Build your package online for an instant quote.",
+  },
+  {
+    q: "Do you travel outside of the city?",
+    a: "Yes. Every package includes travel within a 30-mile radius of our base in Yonkers 10701, and we happily travel further afield – any additional travel cost is calculated automatically when you enter your event address.",
+  },
+  {
+    q: "How long does it take to set the bar up?",
+    a: "Setup takes about 90 minutes, so we arrive at least 2 hours before your guests. After the party we pack up and are out within 60 minutes.",
+  },
+  {
+    q: "How much space do you need?",
+    a: "Our flagship bar, The Old Fashioned, needs a 10' x 8' footprint. Little Tommy Gun, our Piaggio Ape tap truck, needs 10' x 5' and at least 60\" of access clearance. Smaller configurations are available for tight spaces.",
+  },
+  {
+    q: "Do you need access to electricity?",
+    a: "Yes, we need a power source within 100ft of the bar. If that isn't possible at your location, we can provide a generator for an extra charge.",
+  },
+  {
+    q: "Do you provide lighting and signage?",
+    a: "Yes. Every hire package includes the vintage lighting and signage we use to create our signature atmosphere.",
+  },
+  {
+    q: "Can you provide a Certificate of Insurance?",
+    a: "Yes. We carry comprehensive coverage and can provide Certificates of Insurance for General Liability, Liquor Liability and Workers Comp for any venue that requires them.",
+  },
+  {
+    q: "What is the difference between a Full Bar and a Limited Bar?",
+    a: "The Full Bar includes 6 liquors (vodka, gin, rum, tequila, bourbon, scotch); the Limited Bar includes 3 (vodka, tequila, bourbon). Both include beer, wine, mixers and non-alcoholic drinks, and can be customized.",
+  },
+  {
+    q: "What is the difference between Sensible, Standard & Premium?",
+    a: "Sensible uses budget-friendly liquor and wine; Standard steps up to well-known, reputable brands; Premium is top-shelf.",
+  },
+  {
+    q: "Do you offer cash bars?",
+    a: "No. We only offer hosted bars for private events, not cash bars.",
+  },
+  {
+    q: "How do we book The Old Fashioned Cocktail Co.?",
+    a: "Follow the 'Get a Quote' link, choose your event package, and submit a proposal – an OFCC representative will then reach out to finalise the details.",
+  },
+  {
+    q: "Can I buy my own alcohol?",
+    a: "At a private residence you may supply your own alcohol, though our packages are designed to handle everything for you. At a venue or commercial property the law requires a licensed provider, so you cannot supply your own – we obtain the permits and Certificates of Insurance your venue needs.",
+  },
+  {
+    q: "Do I need a permit for my event?",
+    a: "Only for events at a venue or commercial property, which require a liquor license and permit by law – and we handle all of that for you, including the Certificates of Insurance your venue needs. Events at a private residence don't require a permit.",
   },
 ];
 
@@ -203,6 +256,12 @@ export default function FaqsPage() {
         cta={{ label: "Get In Touch", href: "/contact" }}
       />
 
+      <JsonLd
+        data={[
+          faqPageSchema(FAQ_SCHEMA),
+          breadcrumbSchema([{ name: "FAQs", path: "/faqs" }]),
+        ]}
+      />
     </PageShell>
   );
 }

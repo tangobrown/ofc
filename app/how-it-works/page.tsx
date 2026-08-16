@@ -3,14 +3,35 @@ import { pageMeta } from "@/lib/seo";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import FlappersCta from "@/components/FlappersCta";
+import JsonLd from "@/components/JsonLd";
+import { abs, breadcrumbSchema } from "@/lib/schema";
 import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = pageMeta({
-  title: "How It Works",
+  title: "How Cocktail Bar Hire Works | The Old Fashioned Co.",
   description:
-    "Build your party package in seconds: get an instant quote, customize your cocktails and staffing, then submit your proposal. Mobile cocktail bar hire made easy.",
+    "Build your cocktail bar package in seconds — get an instant quote, customize drinks & staffing, then submit. Mobile bar hire made easy across New York.",
   path: "/how-it-works",
 });
+
+const HOW_TO_STEPS = [
+  {
+    name: "Get a Quote",
+    text: "Head to our interactive package builder, enter your event details, and you'll be offered a range of packages to build from — each one an instant, accurate quote.",
+  },
+  {
+    name: "Customize",
+    text: "Every base package is all-inclusive, with recommended staffing and alcohol worked out for you. Then customize everything: add signature cocktails, upgrade liquor, ice and glassware.",
+  },
+  {
+    name: "Confirm Staffing",
+    text: "We work out the number of staff needed to keep your event running smoothly. Add more if you'd like a satellite bar or extra hospitality support.",
+  },
+  {
+    name: "Submit Proposal",
+    text: "Happy with your choices? Submit your proposal and an OFCC representative will arrange a quick consultation to review and fine-tune your package.",
+  },
+];
 
 export default function HowItWorksPage() {
   return (
@@ -35,9 +56,9 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div>
-            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
+            <h2 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
               Get a Quote:
-            </h3>
+            </h2>
             <div className="space-y-4 text-[16.5px] leading-[1.75] text-body">
               <p>They say you can&apos;t put a price on a good time – but for us, it&apos;s a cinch!</p>
               <p>
@@ -79,9 +100,9 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div>
-            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
+            <h2 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
               Customize:
-            </h3>
+            </h2>
             <div className="space-y-4 text-[16.5px] leading-[1.75] text-body">
               <p>Ok, the package is in the bag – now make it yours…</p>
               <p>
@@ -116,9 +137,9 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div>
-            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
+            <h2 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
               Confirm Staffing:
-            </h3>
+            </h2>
             <div className="space-y-4 text-[16.5px] leading-[1.75] text-body">
               <p>
                 We&apos;ll work out the number of staff needed to ensure your event runs smoother than
@@ -140,9 +161,9 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <div>
-            <h3 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
+            <h2 className="m-0 mb-[18px] mt-[6px] font-display text-[24px] font-semibold uppercase tracking-[0.04em] text-gold">
               Submit Proposal:
-            </h3>
+            </h2>
             <div className="space-y-4 text-[16.5px] leading-[1.75] text-body">
               <p>
                 Once you&apos;re happy with your choices click &apos;Submit Proposal&apos; and one of
@@ -162,6 +183,25 @@ export default function HowItWorksPage() {
 
       <FlappersCta subtitle="Check availability for your event now" />
 
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How to Book The Old Fashioned Cocktail Co.",
+            description:
+              "Build and book a mobile cocktail bar package for your New York event in four steps.",
+            step: HOW_TO_STEPS.map((s, i) => ({
+              "@type": "HowToStep",
+              position: i + 1,
+              name: s.name,
+              text: s.text,
+              url: abs(`/how-it-works#step-${i + 1}`),
+            })),
+          },
+          breadcrumbSchema([{ name: "How It Works", path: "/how-it-works" }]),
+        ]}
+      />
     </PageShell>
   );
 }

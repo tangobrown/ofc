@@ -21,25 +21,29 @@ export function pageMeta({
   description,
   path,
   image = DEFAULT_OG_IMAGE,
+  imageAlt,
 }: {
+  /** Full, self-contained <title> (no brand suffix is appended). Keep ≤ ~60 chars. */
   title: string;
   description: string;
   path: string;
   image?: string;
+  imageAlt?: string;
 }): Metadata {
-  const ogTitle = `${title} · ${SITE_NAME}`;
   return {
-    title,
+    // Absolute so each page owns its full title tag rather than inheriting the
+    // root "%s · SITE_NAME" template (which pushed titles well over length).
+    title: { absolute: title },
     description,
     alternates: { canonical: path },
     openGraph: {
-      title: ogTitle,
+      title,
       description,
       url: path,
-      images: [{ url: image, alt: title }],
+      images: [{ url: image, alt: imageAlt ?? title }],
     },
     twitter: {
-      title: ogTitle,
+      title,
       description,
       images: [image],
     },

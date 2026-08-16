@@ -7,14 +7,18 @@ import { EVENT_CAROUSEL } from "@/lib/carousel";
 import OffsetSection from "@/components/OffsetSection";
 import FleetRows from "@/components/FleetRows";
 import FlappersCta from "@/components/FlappersCta";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
 import { IMG } from "@/lib/images";
 import { BOOKING_URL } from "@/lib/nav";
 
 export const metadata: Metadata = pageMeta({
-  title: "Birthday & Anniversary Cocktail Bar Hire",
+  title: "Birthday & Anniversary Cocktail Bar Hire | New York",
   description:
     "Celebrate your birthday or anniversary in roaring-twenties style with a vintage mobile cocktail bar and expert bartenders, hired across New York.",
   path: "/birthdays",
+  image: "/images/birthdays-hero.jpg",
+  imageAlt: "A cocktail being served at a birthday party",
 });
 
 
@@ -81,9 +85,11 @@ export default function BirthdaysPage() {
         imageSide="left"
       >
         <p>
-          We&apos;ll serve up a storm in true prohibition-era style. But unlike a traditional speakeasy,
-          your guests won&apos;t need to come looking for us – we&apos;ll find you! Our nifty range of
-          mobile cocktail bars can be tailored to parties of all sizes and themes in the New York area.
+          We bring the 1920s speakeasy to your party – and unlike the real thing, your guests
+          won&apos;t have to hunt for the door. From milestone birthdays to anniversaries anywhere in
+          the New York area, our{" "}
+          <a href="/fleet" className="text-gold hover:text-cream">vintage mobile cocktail bars</a>{" "}
+          flex to your guest count, your theme and your favourite drinks.
         </p>
       </OffsetSection>
 
@@ -102,6 +108,19 @@ export default function BirthdaysPage() {
         }
       />
 
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: "Birthday & Anniversary Cocktail Bar Hire",
+            description:
+              "Vintage mobile cocktail bar hire for birthdays and anniversaries across New York — roaring-twenties style with expert bartenders.",
+            path: "/birthdays",
+            image: "/images/birthdays-hero.jpg",
+            serviceType: "Birthday and anniversary cocktail bar hire",
+          }),
+          breadcrumbSchema([{ name: "Birthdays & Anniversaries", path: "/birthdays" }]),
+        ]}
+      />
     </PageShell>
   );
 }

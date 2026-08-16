@@ -7,13 +7,17 @@ import { BOOKING_URL } from "@/lib/nav";
 import OffsetSection from "@/components/OffsetSection";
 import FlappersCta from "@/components/FlappersCta";
 import Button from "@/components/Button";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
 import { IMG } from "@/lib/images";
 
 export const metadata: Metadata = pageMeta({
-  title: "Mobile Cocktail Bar for Events",
+  title: "Mobile Cocktail Bar Hire for Events | New York",
   description:
     "Weddings, birthdays, anniversaries or corporate dos — we bring a vintage mobile cocktail bar and professional bartenders to events across New York.",
   path: "/events",
+  image: "/images/events-hero.jpg",
+  imageAlt: "A cocktail being served at an event",
 });
 
 export default function EventsPage() {
@@ -69,8 +73,8 @@ export default function EventsPage() {
         <p>
           Mix business and pleasure the Old Fashioned way by hiring us for your office party or
           networking event. We can offer top-notch alcohol free options where clearer heads are
-          required, or break out the stronger stuff when the ties are loosened up. You don&apos;t get
-          a second chance at a first impression, so why not make it with a Martini?
+          required, or break out the stronger stuff when the ties are loosened up. From welcome drinks
+          to the closing toast, we keep the room buzzing so you can work it.
         </p>
       </OffsetSection>
 
@@ -113,6 +117,17 @@ export default function EventsPage() {
 
       <FlappersCta spacingTop={false} />
 
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: "Mobile Cocktail Bar Hire for Events",
+            description:
+              "Vintage mobile cocktail bar hire for weddings, birthdays, anniversaries and corporate events across New York, with professional bartenders.",
+            path: "/events",
+          }),
+          breadcrumbSchema([{ name: "Events", path: "/events" }]),
+        ]}
+      />
     </PageShell>
   );
 }
