@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { arvo, bosque, lumier } from "./fonts";
 import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "@/lib/seo";
-import { SOCIAL, LOGO_SRC } from "@/lib/nav";
+import { localBusinessSchema, webSiteSchema } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 
 const DEFAULT_TITLE = `${SITE_NAME} — Mobile Cocktail Bar Hire in New York`;
@@ -58,26 +59,6 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: SITE_NAME,
-  description: DEFAULT_DESCRIPTION,
-  url: SITE_URL,
-  logo: `${SITE_URL}${LOGO_SRC}`,
-  image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
-  priceRange: "$$",
-  areaServed: { "@type": "State", name: "New York" },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Yonkers",
-    addressRegion: "NY",
-    postalCode: "10701",
-    addressCountry: "US",
-  },
-  sameAs: [SOCIAL.facebook, SOCIAL.instagram],
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -87,10 +68,7 @@ export default function RootLayout({
     <html lang="en" className={`${arvo.variable} ${bosque.variable} ${lumier.variable}`}>
       <body className="bg-bg text-body font-body">
         {children}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={[localBusinessSchema(), webSiteSchema()]} />
       </body>
     </html>
   );
