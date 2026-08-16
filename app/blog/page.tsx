@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE_NAME } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
+import JsonLd from "@/components/JsonLd";
+import { abs, breadcrumbSchema } from "@/lib/schema";
 import { BOOKING_URL } from "@/lib/nav";
 import Placeholder from "@/components/Placeholder";
 import { POSTS } from "@/lib/blog";
 
 export const metadata: Metadata = pageMeta({
-  title: "Blog — Tips 'n Tricks",
+  title: "Cocktail Tips & Guides | The Old Fashioned Blog",
   description:
     "Shake up your bartending skills with cocktail tips, whiskey and mezcal guides, clear-ice how-tos and party ideas from The Old Fashioned Cocktail Co.",
   path: "/blog",
 });
+
+function isoDate(s: string): string | undefined {
+  const d = new Date(s);
+  return Number.isNaN(d.getTime()) ? undefined : d.toISOString();
+}
 
 export default function BlogIndexPage() {
   return (
@@ -39,7 +46,7 @@ export default function BlogIndexPage() {
                 {post.featureImage ? (
                   <Image
                     src={post.featureImage}
-                    alt={post.title}
+                    alt={post.featureImageAlt ?? post.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
                     className="object-cover"
@@ -61,6 +68,26 @@ export default function BlogIndexPage() {
         </div>
       </section>
 
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: `${SITE_NAME} Blog`,
+            description:
+              "Cocktail tips, whiskey and mezcal guides, clear-ice how-tos and party ideas from The Old Fashioned Cocktail Co.",
+            url: abs("/blog"),
+            blogPost: POSTS.map((post) => ({
+              "@type": "BlogPosting",
+              headline: post.title,
+              url: abs(`/blog/${post.slug}`),
+              datePublished: isoDate(post.date),
+              ...(post.featureImage ? { image: abs(post.featureImage) } : {}),
+            })),
+          },
+          breadcrumbSchema([{ name: "Blog", path: "/blog" }]),
+        ]}
+      />
     </PageShell>
   );
 }

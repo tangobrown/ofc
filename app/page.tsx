@@ -1,11 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 import FlappersCta from "@/components/FlappersCta";
+import { pageMeta } from "@/lib/seo";
 import { IMG } from "@/lib/images";
 import { FLEET } from "@/lib/fleet";
+
+export const metadata: Metadata = pageMeta({
+  title: "Mobile Cocktail Bar Hire in New York | The Old Fashioned",
+  description:
+    "Hire a vintage 1920s mobile cocktail bar for New York weddings, parties & corporate events. Pro bartenders, handcrafted cocktails — get an instant quote.",
+  path: "/",
+});
 
 const EVENTS = [
   {
@@ -70,7 +79,7 @@ export default function HomePage() {
               <div className="relative mb-6 aspect-[3/2] overflow-hidden">
                 <Image
                   src={m.image}
-                  alt={m.name}
+                  alt={m.alt}
                   fill
                   sizes="(min-width:768px) 50vw, 100vw"
                   className="object-cover"

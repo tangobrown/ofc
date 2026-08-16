@@ -17,8 +17,10 @@ const ROUTES = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
   const staticEntries: MetadataRoute.Sitemap = ROUTES.map((route) => ({
     url: `${SITE_URL}${route}`,
+    lastModified: now,
     changeFrequency: "monthly",
     priority: route === "" ? 1 : 0.8,
   }));

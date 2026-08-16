@@ -8,6 +8,13 @@ export type BlogPost = {
   author: string;
   excerpt: string;
   featureImage?: string;
+  featureImageAlt?: string;
+  /** When present, emits HowTo structured data for the post. */
+  howTo?: {
+    name: string;
+    description: string;
+    steps: { name: string; text: string }[];
+  };
   body: React.ReactNode;
 };
 
@@ -32,6 +39,7 @@ export const POSTS: BlogPost[] = [
     excerpt:
       "Welcome back to The Old Fashioned Connoisseur Club. In this blog series we'll be imparting a few tidbits of our hard-earned knowledge, distilled over years of slingin' bottles and mixing up a storm. Previously we've looked deep into whiskey, and this time out we're headin' south of the border to give mezcal a well-deserved mention. Why drink mezcal? Mexican legend…",
     featureImage: `/images/carousel/Close-up-of-cocktail-made.jpg`,
+    featureImageAlt: "A freshly made cocktail served at the bar",
     body: (
       <>
         <h2 className={h2}>Welcome back to The Old Fashioned Connoisseur Club</h2>
@@ -201,6 +209,7 @@ export const POSTS: BlogPost[] = [
     excerpt:
       "A brand new blog series where we'll be imparting a few tidbits of our hard-earned knowledge, distilled over years of slingin' bottles and mixing up a storm. Where to start the series? Well, where better to start than whiskey? A spirit that's at the heart of many a classic cocktail, a little extra whiskey know-how will take your cocktails a…",
     featureImage: `/images/carousel/Old-fashioned-cocktail-bar.jpg`,
+    featureImageAlt: "The Old Fashioned mobile bar stocked with whiskey",
     body: (
       <>
         <p className={p}>
@@ -351,7 +360,7 @@ export const POSTS: BlogPost[] = [
         <p className={p}>
           Go ahead and make yours a classic! And if you need a hand serving whiskey cocktails at your
           next event,{" "}
-          <a href="#" className={link}>
+          <a href="/contact" className={link}>
             get in touch
           </a>
           .
@@ -368,6 +377,30 @@ export const POSTS: BlogPost[] = [
     excerpt:
       "Serving drinks with a measure of style requires a focus on the details. Get the basics right and you may meet expectations. But to be memorable, you need to surpass them. Ask yourself – when was the last time you found yourself jawing to a friend about the new joint in town because \"they just did the basics well…\" Never,…",
     featureImage: `/images/carousel/Cocktails-made-by-Dwayne-from-Old-Fashioned.jpg`,
+    featureImageAlt: "A bartender making cocktails with crystal-clear ice",
+    howTo: {
+      name: "How to Make Clear Ice",
+      description:
+        "Make crystal-clear ice at home using directional freezing — no special equipment required.",
+      steps: [
+        {
+          name: "Fill a cooler",
+          text: "Fill a small lidless cooler with tap water and place it in the freezer for 24 hours so it freezes from the top down.",
+        },
+        {
+          name: "Remove the block",
+          text: "Take the ice out and run the outside of the cooler under warm water to release the block.",
+        },
+        {
+          name: "Cut off the cloudy part",
+          text: "Trim away the cloudy bottom third; score it with a serrated knife and tap gently with a chisel and mallet.",
+        },
+        {
+          name: "Shape your ice",
+          text: "Cut large cubes, spheres or sticks to suit your glass — bigger blocks melt slower and look better.",
+        },
+      ],
+    },
     body: (
       <>
         <p className={p}>
@@ -517,6 +550,34 @@ export const POSTS: BlogPost[] = [
     excerpt:
       "The history of old fashioned cocktails goes way back. We're talkin' all the way to the 1800's back. Folks are still quarreling over the exact date to this day – we're not surprised the fellas and gals who made it first were a little fuzzy on the details after. But the fact that they're still as popular as ever shows…",
     featureImage: `/images/carousel/Ingredients-for-cocktails.jpg`,
+    featureImageAlt: "Whiskey, bitters and a mixing glass for an Old Fashioned",
+    howTo: {
+      name: "How to Make an Old Fashioned Cocktail",
+      description:
+        "The Old Fashioned Cocktail Co.'s signature method for a classic Old Fashioned — whiskey, bitters and demerara syrup over clear ice.",
+      steps: [
+        {
+          name: "Choose your base",
+          text: "Use a rye whiskey or bourbon over 45% alc/vol — we prefer Woodford Reserve Double Oaked.",
+        },
+        {
+          name: "Muddle your modifier",
+          text: "Combine the whiskey with rich demerara syrup and equal parts Angostura and orange bitters in a mixing glass.",
+        },
+        {
+          name: "Stir with ice",
+          text: "Add large ice cubes and stir for 15–20 seconds until the mixing glass frosts, for perfect dilution.",
+        },
+        {
+          name: "Serve",
+          text: "Strain over a large clear ice cube or sphere in a chilled rocks glass.",
+        },
+        {
+          name: "Garnish",
+          text: "Express a swirl of orange peel over the drink and finish with a Luxardo maraschino cherry.",
+        },
+      ],
+    },
     body: (
       <>
         <h2 className={h2}>What&apos;s an Old Fashioned?</h2>
@@ -654,6 +715,7 @@ export const POSTS: BlogPost[] = [
     excerpt:
       "Why would you choose to throw a party the old fashioned way? It's a fair question, we guess. But perhaps \"why wouldn't you..?\" would be a better one. The classics become classics for a reason, after all. We believe that a good old fashioned party and a good old fashioned cocktail share the same key elements: a few simple ingredients…",
     featureImage: `/images/blog/Old-school-music-player.jpg`,
+    featureImageAlt: "A vintage record player set for an old-fashioned party",
     body: (
       <>
         <p className={p}>
@@ -809,7 +871,7 @@ export const POSTS: BlogPost[] = [
         <h2 className={h2}>Sort something to drink</h2>
         <p className={p}>
           This is the easy part –{" "}
-          <a href="#" className={link}>
+          <a href="/contact" className={link}>
             just let us handle it for you
           </a>
           !
