@@ -23,8 +23,9 @@ export const IMG = {
     dwayne: `/images/events/Dwayne-Keaney-Old-Fashioned-Cocktails.webp`,
   },
   home: {
-    // The smoke background video (.mp4) was not re-supplied; the home hero
-    // falls back to this poster image until the video is re-hosted.
+    // Home hero background video, with a poster image as the first-frame /
+    // fallback (shown while the video loads or if it can't play).
+    smokeVideo: `/videos/Smoke-3-3.mp4`,
     smokePoster: `/images/home/smoke-poster.jpg`,
   },
 } as const;
